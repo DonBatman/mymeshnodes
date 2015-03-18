@@ -1,0 +1,134 @@
+function mymeshnodes.register_all(material, descr, image, groups, citem)
+
+local slope_cbox = {
+	type = "fixed",
+	fixed = {
+		{-0.5,  -0.5,  -0.5, 0.5, -0.25, 0.5},
+		{-0.5, -0.25, -0.25, 0.5,     0, 0.5},
+		{-0.5,     0,     0, 0.5,  0.25, 0.5},
+		{-0.5,  0.25,  0.25, 0.5,   0.5, 0.5}
+	}
+}
+
+local slope_cbox_long = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5,   -1.5,  0.5, -0.375, 0.5},  --  NodeBox1
+		{-0.5, -0.375, -1.25, 0.5, -0.25,  0.5},  --  NodeBox2
+		{-0.5, -0.25,  -1,    0.5, -0.125, 0.5},  --  NodeBox3
+		{-0.5, -0.125, -0.75, 0.5,  0,     0.5},  --  NodeBox4
+		{-0.5,  0,     -0.5,  0.5,  0.125, 0.5},  --  NodeBox5
+		{-0.5,  0.125, -0.25, 0.5,  0.25,  0.5},  --  NodeBox6
+		{-0.5,  0.25,   0,    0.5,  0.375, 0.5},  --  NodeBox7
+		{-0.5,  0.375,  0.25, 0.5,  0.5,   0.5},  --  NodeBox8
+	}
+}
+
+local icorner_cbox = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5, -0.5, 0.5, -0.25, 0.5}, -- NodeBox5
+		{-0.5, -0.5, -0.25, 0.5, 0, 0.5}, -- NodeBox6
+		{-0.5, -0.5, -0.5, 0.25, 0, 0.5}, -- NodeBox7
+		{-0.5, 0, -0.5, 0, 0.25, 0.5}, -- NodeBox8
+		{-0.5, 0, 0, 0.5, 0.25, 0.5}, -- NodeBox9
+		{-0.5, 0.25, 0.25, 0.5, 0.5, 0.5}, -- NodeBox10
+		{-0.5, 0.25, -0.5, -0.25, 0.5, 0.5}, -- NodeBox11
+	}
+}
+
+local ocorner_cbox = {
+	type = "fixed",
+	fixed = {
+		{-0.5,  -0.5,  -0.5,   0.5, -0.25, 0.5},
+		{-0.5, -0.25, -0.25,  0.25,     0, 0.5},
+		{-0.5,     0,     0,     0,  0.25, 0.5},
+		{-0.5,  0.25,  0.25, -0.25,   0.5, 0.5}
+	}
+}
+
+local smpyr_cbox = {
+	type = "fixed",
+	fixed = {
+		{ -0.5,   -0.5,   -0.5,   0.5,   -0.375, 0.5 },
+		{ -0.375, -0.375, -0.375, 0.375, -0.25,  0.375},
+		{ -0.25,  -0.25,  -0.25,  0.25,  -0.125, 0.25},
+		{ -0.125, -0.125, -0.125, 0.125,  0,     0.125}
+	}
+}
+
+local pyr_cbox = {
+	type = "fixed",
+	fixed = {
+		{ -0.5,   -0.5,  -0.5,   0.5,  -0.25, 0.5 },
+		{ -0.375, -0.25, -0.375, 0.375, 0,    0.375},
+		{ -0.25,   0,    -0.25,  0.25,  0.25, 0.25},
+		{ -0.125,  0.25, -0.125, 0.125, 0.5,  0.125}
+	}
+}
+
+local slope_fronthalf_cbox = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5,   -0.5,  0.5, -0.375, 0.5},  --  NodeBox1
+		{-0.5, -0.375, -0.25, 0.5, -0.25,  0.5},  --  NodeBox2
+		{-0.5, -0.25,  0,    0.5, -0.125, 0.5},  --  NodeBox3
+		{-0.5, -0.125, 0.25, 0.5,  0,     0.5},  --  NodeBox4
+	}
+}
+
+local slope_backhalf_cbox = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5,   -0.5,  0.5, 0.125, 0.5},  --  NodeBox1
+		{-0.5, 0.125, -0.25, 0.5, 0.25,  0.5},  --  NodeBox2
+		{-0.5, 0.25,  0,    0.5, 0.375, 0.5},  --  NodeBox3
+		{-0.5, 0.375, 0.25, 0.5,  0.5,     0.5},  --  NodeBox4
+	}
+}
+
+
+
+local slopes = {   --shape , Description , mesh , colbox
+	{ "slope" ,        "Slope" ,                      	 "twelve-twelve.obj",       	"slope_cbox"},
+	{ "slope_ic" ,     "Inside Corner Slope" ,        	 "twelve-twelve-ic.obj",    	"icorner_cbox"},
+	{ "slope_oc" ,     "Outside Corner Slope" ,       	 "twelve-twelve-oc.obj",    	"ocorner_cbox"},	
+	{ "lslope" ,       "Long Slope" ,                 	 "six-twelve.obj",     	   	"slope_cbox_long"},
+	{ "lslope_ic" ,    "Inside Corner Long Slope" ,   	 "six-twelve-ic.obj",    	"icorner_cbox_long"},
+	{ "lslope_oc" ,    "Outside Corner Long Slope" ,  	 "six-twelve-oc.obj",    	"ocorner_cbox_long"},
+	{ "smpyramid" ,    "Small Pyramid" ,  			 "smpyramid.obj",    		"smpyr_cbox"},	
+	{ "pyramid" ,      "Pyramid" ,   			 "pyramid.obj",    		"pyr_cbox"},	
+	{ "smquapyramid" , "Small Quarter Pyramid" ,		 "smquapyramid.obj",    	""},	
+	{ "cylinder" ,     "Cylinder" ,   			 "cylinder.obj",    		""},	
+	{ "sphere" ,       "Sphere" ,     			 "sphere.obj",    		""},	
+	{ "rounded" ,      "Rounded" ,  			 "rounded.obj",    		""},	
+	{ "roundedc" ,     "Rounded Corner" ,  			 "rounded_corner.obj",    	""},
+	{ "cone" ,         "Cone" ,  				 "cone.obj",    		""},	
+}
+
+for i in ipairs(slopes) do
+	local shap = slopes[i][1]
+	local desc = slopes[i][2]
+	local mesh = slopes[i][3]
+	local colbox = slopes[i][4]
+
+--slope
+minetest.register_node("mymeshnodes:"..shap.."_"..material, {
+--	description = descr.." "..desc,
+	drawtype = "mesh",
+	mesh = mesh,
+	tiles = {image},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=0},
+	sounds = default.node_sound_wood_defaults(),
+	on_place = minetest.rotate_node,
+	collision_box = cbox,
+	selection_box = cbox,
+})
+
+end
+end
+
+
+
