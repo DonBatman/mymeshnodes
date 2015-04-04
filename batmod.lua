@@ -1,4 +1,7 @@
-function mymeshnodes.register_all(material, descr, image, groups, citem)
+
+
+
+--function mymeshnodes.register_all(material, descr, image, groups, citem)
 
 local slope_cbox = {
 	type = "fixed",
@@ -93,6 +96,24 @@ local circle_cbox = {
 	}
 }
 
+local bat_slopes = {   --Material , Description , Item, Image
+	{ "bat_cobble" ,          "Bat Cobble" ,            "bat_blocks:bat_cobble",              "bat_cobble.png"},
+	{ "bat_cobble_white" ,    "Bat Cobble White" ,      "bat_blocks:bat_cobble_white",        "bat_cobble_white.png"},
+	{ "bat_cobble_tan" ,      "Bat Cobble Tan" ,        "bat_blocks:bat_cobble_tan",          "bat_cobble_tan.png"},
+	{ "bat_pavers" ,          "Bat Pavers" ,            "bat_blocks:bat_pavers",              "bat_pavers.png"},
+	{ "bat_block" ,           "Bat Block" ,             "bat_blocks:bat_block",               "bat_block.png"},
+	{ "bat_tile" ,            "Bat Tile" ,              "bat_blocks:bat_tile",                "bat_tile.png"},
+	{ "bat_diag" ,            "Bat Diag" ,              "bat_blocks:bat_diag",                "bat_diag.png"},
+	{ "bat_x_block" ,         "Bat X" ,                 "bat_blocks:bat_x",                   "bat_x_block.png"},
+	{ "bat_brick" ,           "Bat Brick" ,             "bat_blocks:bat_brick",               "bat_brick.png"},
+	{ "bat_smbrick" ,         "Bat Small Brick" ,       "bat_blocks:bat_smbrick",             "bat_smbrick.png"},
+}
+
+for i in ipairs(bat_slopes) do
+	local mat = bat_slopes[i][1]
+	local desc = bat_slopes[i][2]
+	local item = bat_slopes[i][3]
+	local img = bat_slopes[i][4]
 
 local slopes = {   --shape , Description , mesh , colbox
 	{ "slope" ,        "Slope" ,                      	 "mymeshnodes_twelve-twelve.obj",       "slope_cbox"},
@@ -126,14 +147,14 @@ for i in ipairs(slopes) do
 	local colbox = slopes[i][4]
 
 --slope
-minetest.register_node("mymeshnodes:"..shap.."_"..material, {
---	description = descr.." "..desc,
+minetest.register_node("mymeshnodes:"..shap.."_"..mat, {
+	description = desc.." "..mat,
 	drawtype = "mesh",
 	mesh = mesh,
-	tiles = {image},
+	tiles = {img},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=0},
+	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 	collision_box = colbox,
@@ -142,6 +163,13 @@ minetest.register_node("mymeshnodes:"..shap.."_"..material, {
 
 end
 end
+
+
+
+
+
+
+
 
 
 

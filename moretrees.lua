@@ -1,4 +1,7 @@
-function mymeshnodes.register_all(material, descr, image, groups, citem)
+
+
+
+--function mymeshnodes.register_all(material, descr, image, groups, citem)
 
 local slope_cbox = {
 	type = "fixed",
@@ -93,6 +96,24 @@ local circle_cbox = {
 	}
 }
 
+local bat_slopes = {   --Material , Description , Item, Image
+	{ "apple" ,  "Apple Plank" ,         "moretrees:apple_planks",      "moretrees_apple_tree_wood.png"},
+	{"beech",    "Beech Plank",          "moretrees:beech_planks",      "moretrees_beech_wood.png"},
+	{"oak",	     "Oak Plank",            "moretrees:oak_planks",        "moretrees_oak_wood.png"},
+	{"sequoia",  "Giant Sequoia Plank",  "moretrees:sequoia_planks",    "moretrees_sequoia_wood.png"},
+	{"birch",    "Birch Plank",          "moretrees:birch_planks",      "moretrees_birch_wood.png"},
+	{"palm",     "Palm Plank",           "moretrees:palm_planks",       "moretrees_palm_wood.png"},
+	{"spruce",   "Spruce Plank",         "moretrees:spruce_planks",     "moretrees_spruce_wood.png"},
+	{"willow",   "Willow Plank",         "moretrees:willow_planks",     "moretrees_willow_wood.png"},
+	{"rubber",   "Rubber Plank",         "moretrees:rubber_tree_planks","moretrees_rubber_tree_wood.png"},
+	{"fir",	     "Douglas Fir Plank",    "moretrees:fir_planks",        "moretrees_fir_wood.png"},
+}
+
+for i in ipairs(bat_slopes) do
+	local mat = bat_slopes[i][1]
+	local desc = bat_slopes[i][2]
+	local item = bat_slopes[i][3]
+	local img = bat_slopes[i][4]
 
 local slopes = {   --shape , Description , mesh , colbox
 	{ "slope" ,        "Slope" ,                      	 "mymeshnodes_twelve-twelve.obj",       "slope_cbox"},
@@ -126,14 +147,14 @@ for i in ipairs(slopes) do
 	local colbox = slopes[i][4]
 
 --slope
-minetest.register_node("mymeshnodes:"..shap.."_"..material, {
---	description = descr.." "..desc,
+minetest.register_node("mymeshnodes:"..shap.."_"..mat, {
+	description = desc.." "..mat,
 	drawtype = "mesh",
 	mesh = mesh,
-	tiles = {image},
+	tiles = {img},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=0},
+	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 	collision_box = colbox,
@@ -142,6 +163,13 @@ minetest.register_node("mymeshnodes:"..shap.."_"..material, {
 
 end
 end
+
+
+
+
+
+
+
 
 
 

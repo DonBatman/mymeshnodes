@@ -208,7 +208,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_jungletree", 
 	"Jungle Tree", 
@@ -288,7 +288,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_pinetree", 
 	"Pine Tree", 
@@ -338,11 +338,11 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_tree", 
 	"Tree", 
-	"default_tree.png",
+	"mymeshnodes_default_tree.png",
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"default:tree",
 	"normal"
@@ -358,7 +358,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item, drawtype
 	"farming_straw", 
 	"Straw", 
@@ -371,7 +371,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item, dra
 -----------------------------------------------------------------------------------------------------
 --wool
 
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_white", 
 	"White Wool", 
@@ -380,7 +380,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_white"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_black", 
 	"Black Wool", 
@@ -389,7 +389,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_black"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_blue", 
 	"Blue Wool", 
@@ -398,7 +398,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_blue"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_brown", 
 	"Brown Wool", 
@@ -407,7 +407,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_brown"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_cyan", 
 	"Cyan Wool", 
@@ -416,7 +416,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_cyan"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_dark_green", 
 	"Dark Green Wool", 
@@ -425,7 +425,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_dark_green"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_dark_grey", 
 	"Dark Grey Wool", 
@@ -434,7 +434,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_dark_grey"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_green", 
 	"Green Wool", 
@@ -443,7 +443,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_green"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_grey", 
 	"Grey Wool", 
@@ -452,7 +452,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_grey"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_magenta", 
 	"Magenta Wool", 
@@ -461,7 +461,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_magenta"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_orange", 
 	"Orange Wool", 
@@ -470,7 +470,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_orange"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_pink", 
 	"Pink Wool", 
@@ -479,7 +479,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_pink"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_red", 
 	"Red Wool", 
@@ -488,7 +488,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_red"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_violet", 
 	"Violet Wool", 
@@ -497,7 +497,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_violet"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"wool_yellow", 
 	"Yellow Wool", 

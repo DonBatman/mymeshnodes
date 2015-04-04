@@ -1,4 +1,7 @@
-function mymeshnodes.register_all(material, descr, image, groups, citem)
+
+
+
+--function mymeshnodes.register_all(material, descr, image, groups, citem)
 
 local slope_cbox = {
 	type = "fixed",
@@ -93,6 +96,25 @@ local circle_cbox = {
 	}
 }
 
+local bat_slopes = {   --Material , Description , Item, Image
+	{ "cactus_brick" ,        "Cactus Brick" ,         "moreblocks:cactus_brick",        "moreblocks_cactus_brick.png"},
+	{ "cactus_checker" ,      "Cactus Checker" ,       "moreblocks:cactus_checker",      "default_stone.png^moreblocks_cactus_checker.png"},
+	{ "coal_stone_bricks" ,   "Coal Stone Bricks" ,    "moreblocks:coal_stone_bricks",   "moreblocks_coal_stone_bricks.png"},
+	{ "circle_stone_bricks" , "Circle Stone Bricks" ,  "moreblocks:circle_stone_bricks", "moreblocks_circle_stone_bricks.png"},
+	{ "iron_checker" ,        "Iron Checker" ,         "moreblocks:iron_checker",        "moreblocks_iron_checker.png"},
+	{ "iron_stone_bricks" ,   "Iron Stone Bricks" ,    "moreblocks:iron_stone_bricks",   "moreblocks_iron_stone_bricks.png"},
+	{ "plankstone" ,          "Plankstone" ,           "moreblocks:plankstone",          "moreblocks_plankstone.png"},
+	{ "stone_tile" ,          "Stone Tile" ,           "moreblocks:stone_tile",          "moreblocks_stone_tile.png"},
+	{ "wood_tile_center" ,    "Wood Tile Center" ,     "moreblocks:wood_tile_center",    "default_wood.png^moreblocks_wood_tile_center.png"},
+	{ "wood_tile_full" ,      "Wood Tile Full" ,       "moreblocks:wood_tile_full",      "default_wood.png^moreblocks_wood_tile.png"},
+}
+
+
+for i in ipairs(bat_slopes) do
+	local mat = bat_slopes[i][1]
+	local desc = bat_slopes[i][2]
+	local item = bat_slopes[i][3]
+	local img = bat_slopes[i][4]
 
 local slopes = {   --shape , Description , mesh , colbox
 	{ "slope" ,        "Slope" ,                      	 "mymeshnodes_twelve-twelve.obj",       "slope_cbox"},
@@ -126,14 +148,14 @@ for i in ipairs(slopes) do
 	local colbox = slopes[i][4]
 
 --slope
-minetest.register_node("mymeshnodes:"..shap.."_"..material, {
---	description = descr.." "..desc,
+minetest.register_node("mymeshnodes:"..shap.."_"..mat, {
+	description = desc.." "..mat,
 	drawtype = "mesh",
 	mesh = mesh,
-	tiles = {image},
+	tiles = {img},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=0},
+	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 	collision_box = colbox,
@@ -142,6 +164,13 @@ minetest.register_node("mymeshnodes:"..shap.."_"..material, {
 
 end
 end
+
+
+
+
+
+
+
 
 
 
