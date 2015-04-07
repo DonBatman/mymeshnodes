@@ -326,6 +326,9 @@ then
 ----------------------------------------------------------------------------------
 --register nodes
 local nodes_of_slopes = {
+			{"default:leaves",		"default_leaves"},
+			{"default:jungleleaves",	"default_jungleleaves"},
+			{"default:pine_needles",	"default_pine_needles"},
 			{"default:brick",		"default_brick"},
 --			{"default:bronzeblock",		"default_bronze_block"},
 --			{"default:cactus",		"default_cactus"},

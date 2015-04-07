@@ -1,5 +1,36 @@
 ---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
+	"default_leaves", 
+	"Leaves", 
+	"default_leaves.png",
+	"{cracky = 1, oddly_breakable_by_hand = 1, not_in_creative_inventory=1}",
+	"default:leaves",
+	"normal"
+	)
+--]]
+---[[
+mymeshnodes.register_all(--material, description, image, groups, craft item
+	"default_jungleleaves", 
+	"Jungle Leaves", 
+	"default_jungleleaves.png",
+	"{cracky = 1, oddly_breakable_by_hand = 1, not_in_creative_inventory=1}",
+	"default:jungleleaves",
+	"normal"
+	)
+--]]
+---[[
+mymeshnodes.register_all(--material, description, image, groups, craft item
+	"default_pine_needles", 
+	"Pine Needles", 
+	"default_pine_needles.png",
+	"{cracky = 1, oddly_breakable_by_hand = 1, not_in_creative_inventory=1}",
+	"default:pine_needles",
+	"normal"
+	)
+--]]
+
+---[[
+mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_sandstone", 
 	"Sandstone", 
 	"default_sandstone.png",

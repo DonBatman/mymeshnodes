@@ -36,7 +36,26 @@ local icorner_cbox = {
 		{-0.5, 0.25, -0.5, -0.25, 0.5, 0.5}, -- NodeBox11
 	}
 }
-
+local icorner_cbox_long = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5, -1.5, -0.25, 0.5, 0.5},
+		{-0.5, -0.5, 0.25, 1.5, 0.5, 0.5},
+		{-0.5, -0.5, 0, 1.5, 0.375, 0.5},
+		{-0.5, -0.5, -1.5, 0, 0.375, 0.5},
+		{-0.5, -0.5, -1.5, 0.25, 0.25, 0.5},
+		{-0.5, -0.5, -1.5, 0.5, 0.125, 0.5},
+		{-0.5, -0.5, -1.5, 0.75, 0, 0.5},
+		{-0.5, -0.5, -1.5, 1, -0.125, 0.5},
+		{-0.5, -0.5, -1.5, 1.25, -0.25, 0.5},
+		{-0.5, -0.5, -1.5, 1.5, -0.375, 0.5},
+		{-0.5, -0.5, -0.25, 1.5, 0.25, 0.5},
+		{-0.5, -0.5, -0.5, 1.5, 0.125, 0.5}, 
+		{-0.5, -0.5, -0.75, 1.5, 0, 0.5},
+		{-0.5, -0.5, -1, 1.5, -0.125, 0.5},
+		{-0.5, -0.5, -1.25, 1.5, -0.25, 0.5},
+	}
+}
 local ocorner_cbox = {
 	type = "fixed",
 	fixed = {
@@ -46,7 +65,19 @@ local ocorner_cbox = {
 		{-0.5,  0.25,  0.25, -0.25,   0.5, 0.5}
 	}
 }
-
+local ocorner_cbox_long = {
+	type = "fixed",
+	fixed = {
+		{-0.5, -0.5, 0.25, -0.25, 0.5, 0.5},
+		{-0.5, -0.5, 0, 0, 0.375, 0.5},
+		{-0.5, -0.5, -0.25, 0.25, 0.25, 0.5},
+		{-0.5, -0.5, -0.5, 0.5, 0.125, 0.5}, 
+		{-0.5, -0.5, -0.75, 0.75, 0, 0.5}, 
+		{-0.5, -0.5, -1, 1, -0.125, 0.5}, 
+		{-0.5, -0.5, -1.25, 1.25, -0.25, 0.5}, 
+		{-0.5, -0.5, -1.5, 1.5, -0.375, 0.5},
+	}
+}
 local smpyr_cbox = {
 	type = "fixed",
 	fixed = {
@@ -92,23 +123,77 @@ local circle_cbox = {
 		{-0.5, -0.5, -0.5,  0.5, -0.25, 0.5}, 
 	}
 }
-
+local longslope_top_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, 0.25, 0.5, 0.5, 0.5}, 
+			{-0.5, -0.5, 0, 0.5, 0.375, 0.25}, 
+			{-0.5, -0.5, -0.25, 0.5, 0.25, 0}, 
+			{-0.5, -0.5, -0.5, 0.5, 0.125, -0.25},  
+	}
+}
+local longslope_bottom_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, 0.25, 0.5, 0, 0.5},
+			{-0.5, -0.5, 0, 0.5, -0.125, 0.25},
+			{-0.5, -0.5, -0.25, 0.5, -0.25, 0}, 
+			{-0.5, -0.5, -0.5, 0.5, -0.375, -0.25}, 
+	}
+}
+local pole_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.125, -0.5, -0.125, 0.125, 0.5, 0.125}, 
+	}
+}
+local smquapyramid_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, 0.25, -0.25, 0, 0.5}, 
+			{-0.5, -0.5, 0, -0.25, -0.125, 0.25},
+			{-0.5, -0.5, -0.25, -0.25, -0.25, 0}, 
+			{-0.5, -0.5, -0.5, -0.25, -0.375, -0.25},
+			{-0.25, -0.5, 0.25, 0, -0.125, 0.5}, 
+			{0, -0.5, 0.25, 0.25, -0.25, 0.5}, 
+			{0.25, -0.5, 0.25, 0.5, -0.375, 0.5}, 
+			{-0.25, -0.5, 0, 0, -0.25, 0.25}, 
+			{-0.25, -0.5, -0.25, 0, -0.375, 0}, 
+			{0, -0.5, 0, 0.25, -0.375, 0.25}, 
+	}
+}
+local quapyramid_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, 0.25, -0.25, 0.5, 0.5}, 
+			{-0.5, -0.5, 0, -0.25, 0.375, 0.25}, 
+			{-0.5, -0.5, -0.25, -0.25, 0.25, 0}, 
+			{-0.5, -0.5, -0.5, -0.25, 0.125, -0.25}, 
+			{-0.25, -0.5, 0.25, 0, 0.375, 0.5}, 
+			{0, -0.5, 0.25, 0.25, 0.25, 0.5}, 
+			{0.25, -0.5, 0.25, 0.5, 0.125, 0.5}, 
+			{-0.25, -0.5, 0, 0, 0.25, 0.25}, 
+			{-0.25, -0.5, -0.25, 0, 0.125, 0}, 
+			{0, -0.5, 0, 0.25, 0.125, 0.25}, 
+			{-0.25, -0.5, -0.5, 0.5, 0, 0.25}, 
+	}
+}
 
 local slopes = {   --shape , Description , mesh , colbox
-	{ "slope" ,        "Slope" ,                      	 "mymeshnodes_twelve-twelve.obj",       "slope_cbox"},
-	{ "slope_ic" ,     "Inside Corner Slope" ,        	 "mymeshnodes_twelve-twelve-ic.obj",    "icorner_cbox"},
-	{ "slope_oc" ,     "Outside Corner Slope" ,       	 "mymeshnodes_twelve-twelve-oc.obj",    "ocorner_cbox"},	
-	{ "lslope" ,       "Long Slope" ,                 	 "mymeshnodes_six-twelve.obj",     	"slope_cbox_long"},
-	{ "lslope_ic" ,    "Inside Corner Long Slope" ,   	 "mymeshnodes_six-twelve-ic.obj",    	"icorner_cbox_long"},
-	{ "lslope_oc" ,    "Outside Corner Long Slope" ,  	 "mymeshnodes_six-twelve-oc.obj",    	"ocorner_cbox_long"},
-	{ "lslope_top" ,   "Long Slope Top" ,  			 "mymeshnodes_lslope_top.obj",    	""},
-	{ "lslope_bot" ,   "Long Slope Bottom" ,  		 "mymeshnodes_lslope_bot.obj",    	""},
-	{ "smpyramid" ,    "Small Pyramid" ,  			 "mymeshnodes_smpyramid.obj",    	"smpyr_cbox"},	
-	{ "pyramid" ,      "Pyramid" ,   			 "mymeshnodes_pyramid.obj",    		"pyr_cbox"},	
-	{ "smquapyramid" , "Small Quarter Pyramid" ,		 "mymeshnodes_smquapyramid.obj",    	""},		
-	{ "quapyramid" ,   "Quarter Pyramid" ,			 "mymeshnodes_quapyramid.obj",    	""},	
-	{ "circle" , 	   "Circle" ,				 "mymeshnodes_circle.obj",    		"circle_cbox"},	
-	{ "pole" , 	   "Pole" ,				 "mymeshnodes_pole.obj",    		""},	
+	{ "slope" ,        "Slope" ,                      	 "mymeshnodes_twelve-twelve.obj",       slope_cbox},
+	{ "slope_ic" ,     "Inside Corner Slope" ,        	 "mymeshnodes_twelve-twelve-ic.obj",    icorner_cbox},
+	{ "slope_oc" ,     "Outside Corner Slope" ,       	 "mymeshnodes_twelve-twelve-oc.obj",    ocorner_cbox},	
+	{ "lslope" ,       "Long Slope" ,                 	 "mymeshnodes_six-twelve.obj",     	slope_cbox_long},
+	{ "lslope_ic" ,    "Inside Corner Long Slope" ,   	 "mymeshnodes_six-twelve-ic.obj",    	icorner_cbox_long},
+	{ "lslope_oc" ,    "Outside Corner Long Slope" ,  	 "mymeshnodes_six-twelve-oc.obj",    	ocorner_cbox_long},
+	{ "lslope_top" ,   "Long Slope Top" ,  			 "mymeshnodes_lslope_top.obj",    	longslope_top_cbox},
+	{ "lslope_bot" ,   "Long Slope Bottom" ,  		 "mymeshnodes_lslope_bot.obj",    	longslope_bottom_cbox},
+	{ "smpyramid" ,    "Small Pyramid" ,  			 "mymeshnodes_smpyramid.obj",    	smpyr_cbox},	
+	{ "pyramid" ,      "Pyramid" ,   			 "mymeshnodes_pyramid.obj",    		pyr_cbox},	
+	{ "smquapyramid" , "Small Quarter Pyramid" ,		 "mymeshnodes_smquapyramid.obj",    	smquapyramid_cbox},		
+	{ "quapyramid" ,   "Quarter Pyramid" ,			 "mymeshnodes_quapyramid.obj",    	quapyramid_cbox},	
+	{ "circle" , 	   "Circle" ,				 "mymeshnodes_circle.obj",    		circle_cbox},	
+	{ "pole" , 	   "Pole" ,				 "mymeshnodes_pole.obj",    		pole_cbox},	
 	{ "ichalf" , 	   "Inside Corner Half" ,		 "mymeshnodes_ichalf.obj",    		""},
 	{ "cylinder" ,     "Cylinder" ,   			 "mymeshnodes_cylinder.obj",    	""},	
 	{ "sphere" ,       "Sphere" ,     			 "mymeshnodes_sphere.obj",    		""},	
@@ -127,13 +212,13 @@ for i in ipairs(slopes) do
 
 --slope
 minetest.register_node("mymeshnodes:"..shap.."_"..material, {
---	description = descr.." "..desc,
+	description = descr.." "..desc,
 	drawtype = "mesh",
 	mesh = mesh,
 	tiles = {image},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=0},
+	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
 	collision_box = colbox,
