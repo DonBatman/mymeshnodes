@@ -159,7 +159,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
----[[
+--[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_coal_block", 
 	"Coal Block", 
@@ -219,7 +219,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
----[[
+--[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_gravel", 
 	"Gravel", 
