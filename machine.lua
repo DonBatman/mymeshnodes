@@ -5,11 +5,14 @@ local anzahl = {}
 
 minetest.register_node("mymeshnodes:machine", {
 	description = "Mesh Machine",
-	tiles = {"default_pinewood.png"},
-	drawtype = "nodebox",
+	tiles = {"mymeshnodes_cubemap.png"},
+--	tiles = {"default_pinewood.png"},
+	drawtype = "mesh",
+	mesh = "mymeshnodes_machine.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky=2},
+--[[
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -28,6 +31,7 @@ minetest.register_node("mymeshnodes:machine", {
 			{-0.5, 0.375, -0.5, 0.5, 0.5, -0.375}, 
 		}
 	},
+--]]
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -333,7 +337,7 @@ local nodes_of_slopes = {
 --			{"default:bronzeblock",		"default_bronze_block"},
 --			{"default:cactus",		"default_cactus"},
 			{"default:clay",		"default_clay"},
-			{"default:coalblock",		"default_coal_block"},
+--			{"default:coalblock",		"default_coal_block"},
 			{"default:cobble",		"default_cobble"},
 --			{"default:copperblock",		"default_copper_block"},
 			{"default:desert_cobble",	"default_desert_cobble"},
@@ -343,7 +347,7 @@ local nodes_of_slopes = {
 --			{"default:dirt",		"default_dirt"},
 --			{"default:glass",		"default_glass"},
 --			{"default:goldblock",		"default_gold_block"},
-			{"default:gravel",		"default_gravel"},
+--			{"default:gravel",		"default_gravel"},
 --			{"default:ice",			"default_ice"},
 			{"default:jungletree",		"default_jungletree"},
 			{"default:junglewood",		"default_junglewood"},
