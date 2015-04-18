@@ -14,6 +14,7 @@ local mod_castles = minetest.get_modpath("castles")
 local mod_bat_blocks = minetest.get_modpath("bat_blocks")
 local mod_moretrees = minetest.get_modpath("moretrees")
 local mod_hardenedclay = minetest.get_modpath("hardenedclay")
+local mod_ores = minetest.get_modpath("ores")
 
 if mod_moreblocks then
 	dofile(minetest.get_modpath("mymeshnodes").."/moreblocks.lua")
@@ -42,6 +43,11 @@ if mod_moretrees then
 
 if mod_hardenedclay then
 	dofile(minetest.get_modpath("mymeshnodes").."/hardenedclay.lua")
+	
+	end
+
+if mod_ores then
+	dofile(minetest.get_modpath("mymeshnodes").."/ores.lua")
 	
 	end
 
