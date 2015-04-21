@@ -373,7 +373,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_tree", 
 	"Tree", 
-	"mymeshnodes_default_tree.png",
+	"default_tree.png",
 	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
 	"default:tree",
 	"normal"

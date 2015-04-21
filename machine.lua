@@ -6,32 +6,11 @@ local anzahl = {}
 minetest.register_node("mymeshnodes:machine", {
 	description = "Mesh Machine",
 	tiles = {"mymeshnodes_cubemap.png"},
---	tiles = {"default_pinewood.png"},
 	drawtype = "mesh",
 	mesh = "mymeshnodes_machine.obj",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky=2},
---[[
-	node_box = {
-		type = "fixed",
-		fixed = {
-			{-0.5, -0.5, -0.5, 0.5, -0.375, 0.5}, 
-			{-0.5, -0.375, -0.375, 0.5, -0.25, 0.5}, 
-			{-0.5, -0.25, -0.25, 0.5, -0.125, 0.5}, 
-			{-0.5, -0.125, -0.125, 0.5, 0, 0.5}, 
-			{-0.5, 0, 0, 0.5, 0.125, 0.5}, 
-			{-0.5, 0.125, 0.125, 0.5, 0.25, 0.5}, 
-			{-0.5, 0.25, 0.25, 0.5, 0.375, 0.5}, 
-			{-0.5, 0.375, 0.375, 0.5, 0.5, 0.5}, 
-			{-0.5, -0.5, -0.5, -0.375, 0.5, -0.375}, 
-			{-0.5, 0.375, -0.375, -0.375, 0.5, 0.375}, 
-			{0.375, 0.375, -0.375, 0.5, 0.5, 0.375}, 
-			{0.375, -0.5, -0.5, 0.5, 0.5, -0.375}, 
-			{-0.5, 0.375, -0.5, 0.5, 0.5, -0.375}, 
-		}
-	},
---]]
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -42,7 +21,7 @@ minetest.register_node("mymeshnodes:machine", {
 	after_place_node = function(pos, placer)
 	local meta = minetest.env:get_meta(pos);
 			meta:set_string("owner",  (placer:get_player_name() or ""));
-			meta:set_string("infotext",  "Mesh Machine is empty (owned by " .. (placer:get_player_name() or "") .. ")");
+			meta:set_string("infotext",  "Mesh Machine (owned by " .. (placer:get_player_name() or "") .. ")");
 		end,
 
 can_dig = function(pos,player)
@@ -91,7 +70,6 @@ on_construct = function(pos)
 		"image_button[4,5.5;1,1;mymeshnodes_mach13.png;roundedc; ]"..
 		"image_button[5,5.5;1,1;mymeshnodes_mach14.png;cone; ]"..
 		"image_button[6,5.5;1,1;mymeshnodes_mach17.png;blob; ]"..
---		"image_button[7,5.5;1,1;mymeshnodes_mach22.png;barrel; ]"..
 		"list[current_player;main;2,7;8,4;]")
 	meta:set_string("infotext", "Mesh Machine")
 	local inv = meta:get_inventory()
@@ -124,7 +102,6 @@ or fields["rounded"]
 or fields["roundedc"]
 or fields["cone"]
 or fields["blob"]
-or fields["barrel"]
 then
 
 	if fields["slope"] then
@@ -311,15 +288,6 @@ then
 		make_ok = "0"
 		anzahl = "1"
 		shape = "mymeshnodes:blob_"
-		if inv:is_empty("ingot") then
-			return
-		end
-	end
-
-	if fields["barrel"] then
-		make_ok = "0"
-		anzahl = "1"
-		shape = "mymeshnodes:barrel_"
 		if inv:is_empty("ingot") then
 			return
 		end
