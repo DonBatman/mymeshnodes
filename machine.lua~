@@ -453,9 +453,9 @@ end
 minetest.register_craft({
 		output = 'mymeshnodes:machine',
 		recipe = {
-			{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
-			{'default:copper_ingot', 'default:gold_ingot', 'default:copper_ingot'},
-			{'default:steel_ingot', "default:copper_ingot", 'default:steel_ingot'},		
+			{'default:pinewood', 'default:pinewood', 'default:pinewood'},
+			{'default:pinewood', 'default:steel_ingot', 'default:pinewood'},
+			{'default:pinewood', "default:pinewood", 'default:pinewood'},		
 		},
 })
 
