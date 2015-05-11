@@ -421,6 +421,25 @@ local nodes_of_slopes = {
 	{ "hardenedclay:hardened_clay_cyan" ,    	"hardened_clay_cyan"},
 	{ "hardenedclay:hardened_clay_grey" ,    	"hardened_clay_grey"},
 
+--mymulch
+
+{"mymulch:mulch_black", "mulch_black"},
+{"mymulch:mulch_blue", "mulch_blue"},
+{"mymulch:mulch_brown", "mulch_brown"},
+{"mymulch:mulch_cyan", "mulch_cyan"},
+{"mymulch:mulch_dark_green", "mulch_dark_green"},
+{"mymulch:mulch_dark_grey", "mulch_dark_grey"},
+{"mymulch:mulch_green", "mulch_green"},
+{"mymulch:mulch_grey", "mulch_grey"},
+{"mymulch:mulch_magenta", "mulch_magenta"},
+{"mymulch:mulch_orange", "mulch_orange"},
+{"mymulch:mulch_pink", "mulch_pink"},
+{"mymulch:mulch_red", "mulch_red"},
+{"mymulch:mulch_violet", "mulch_violet"},
+{"mymulch:mulch_white", "mulch_white"},
+{"mymulch:mulch_yellow", "mulch_yellow"},
+{"mymulch:mulch_tan", "mulch_tan"},
+
 			}
 
 	for i in ipairs (nodes_of_slopes) do

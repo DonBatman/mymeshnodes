@@ -79,7 +79,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_cactus", 
 	"Cactus", 
@@ -129,7 +129,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_dirt", 
 	"Dirt", 
@@ -149,7 +149,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_bronze_block", 
 	"Bronze Block", 
@@ -159,7 +159,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_coal_block", 
 	"Coal Block", 
@@ -169,7 +169,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_copper_block", 
 	"Copper Block", 
@@ -189,7 +189,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_diamond_block", 
 	"Diamond Block", 
@@ -199,7 +199,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_glass", 
 	"Glass", 
@@ -209,7 +209,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"glasslike"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_gold_block", 
 	"Gold Block", 
@@ -219,7 +219,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_gravel", 
 	"Gravel", 
@@ -269,7 +269,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_mese", 
 	"Mese", 
@@ -289,7 +289,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_obsidian", 
 	"Obsidian", 
@@ -299,7 +299,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item, drawtype
 	"default_obsidian_glass", 
 	"Obsidian Glass", 
@@ -309,7 +309,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item, dra
 	"glasslike"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_obsidian_brick", 
 	"Obsidian Brick", 
@@ -349,7 +349,7 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 	"normal"
 	)
 --]]
---[[
+---[[
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"default_steel_block", 
 	"Steel Block", 
