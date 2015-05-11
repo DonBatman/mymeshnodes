@@ -1,8 +1,3 @@
-
-
-
---function mymeshnodes.register_all(material, descr, image, groups, citem)
-
 local slope_cbox = {
 	type = "fixed",
 	fixed = {
@@ -96,7 +91,7 @@ local circle_cbox = {
 	}
 }
 
-local bat_slopes = {   --Material , Description , Item, Image
+local more_slopes = {   --Material , Description , Item, Image
 	{ "cactus_brick" ,        "Cactus Brick" ,         "moreblocks:cactus_brick",        "moreblocks_cactus_brick.png"},
 	{ "cactus_checker" ,      "Cactus Checker" ,       "moreblocks:cactus_checker",      "default_stone.png^moreblocks_cactus_checker.png"},
 	{ "coal_stone_bricks" ,   "Coal Stone Bricks" ,    "moreblocks:coal_stone_bricks",   "moreblocks_coal_stone_bricks.png"},
@@ -110,11 +105,11 @@ local bat_slopes = {   --Material , Description , Item, Image
 }
 
 
-for i in ipairs(bat_slopes) do
-	local mat = bat_slopes[i][1]
-	local desc = bat_slopes[i][2]
-	local item = bat_slopes[i][3]
-	local img = bat_slopes[i][4]
+for i in ipairs(more_slopes) do
+	local mat = more_slopes[i][1]
+	local desc = more_slopes[i][2]
+	local item = more_slopes[i][3]
+	local img = more_slopes[i][4]
 
 local slopes = {   --shape , Description , mesh , colbox
 	{ "slope" ,        "Slope" ,                      	 "mymeshnodes_twelve-twelve.obj",       "slope_cbox"},
