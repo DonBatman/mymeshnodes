@@ -539,6 +539,16 @@ mymeshnodes.register_all(--material, description, image, groups, craft item
 --]]
 
 
+mymeshnodes.register_all(--material, description, image, groups, craft item
+	"mi", 
+	"", 
+	"wool_yellow.png^[colorize:green:220",
+	"{cracky = 1, oddly_breakable_by_hand = 1,not_in_creative_inventory=1}",
+	"mi"
+	)
+
+
+
 
 
 

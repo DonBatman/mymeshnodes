@@ -39,39 +39,46 @@ on_construct = function(pos)
 	local meta = minetest.env:get_meta(pos)
 	meta:set_string("formspec", "invsize[12,11;]"..
 		"background[-0.15,-0.25;12.40,11.75;mymeshnodes_background.png]"..
-		"list[current_name;ingot;9,2;1,1;]"..
-		"list[current_name;res;9,4;1,1;]"..
-		"label[9,1.5;Input:]"..
-		"label[9,3.5;Output:]"..
+		"list[current_name;ingot;8.5,5.5;1,1;]"..
+		"list[current_name;res;10,5.5;1,1;]"..
+		"label[8.5,5;Input:]"..
+		"label[10,5;Output:]"..
 		"label[0,0;Mesh Nodes:]"..
 		"label[1,0.5;Slopes]"..
-		"image_button[1,1;1,1;mymeshnodes_mach1.png;slope; ]"..
-		"image_button[2,1;1,1;mymeshnodes_mach2.png;slopeic; ]"..
-		"image_button[3,1;1,1;mymeshnodes_mach3.png;slopeoc; ]"..
-		"image_button[4,1;1,1;mymeshnodes_mach2.png;slopei45; ]"..
-		"image_button[5,1;1,1;mymeshnodes_mach3.png;slopeo45; ]"..
+		"item_image_button[1,1;1,1;mymeshnodes:slope_mi;slope; ]"..
+		"item_image_button[2,1;1,1;mymeshnodes:slope_ic_mi;slopeic; ]"..
+		"item_image_button[3,1;1,1;mymeshnodes:slope_oc_mi;slopeoc; ]"..
+		"item_image_button[4,1;1,1;mymeshnodes:slope_i45_mi;slopei45; ]"..
+		"item_image_button[5,1;1,1;mymeshnodes:slope_o45_mi;slopeo45; ]"..
 		"label[1,2;Long Slopes]"..
-		"image_button[1,2.5;1,1;mymeshnodes_mach4.png;lslope; ]"..
-		"image_button[2,2.5;1,1;mymeshnodes_mach5.png;lslopeic; ]"..
-		"image_button[3,2.5;1,1;mymeshnodes_mach6.png;lslopeoc; ]"..
-		"image_button[4,2.5;1,1;mymeshnodes_mach15.png;lslopetop; ]"..
-		"image_button[5,2.5;1,1;mymeshnodes_mach16.png;lslopebot; ]"..
+		"item_image_button[1,2.5;1,1;mymeshnodes:lslope_mi;lslope; ]"..
+		"item_image_button[2,2.5;1,1;mymeshnodes:lslope_ic_mi;lslopeic; ]"..
+		"item_image_button[3,2.5;1,1;mymeshnodes:lslope_oc_mi;lslopeoc; ]"..
+		"item_image_button[4,2.5;1,1;mymeshnodes:lslope_top_mi;lslopetop; ]"..
+		"item_image_button[5,2.5;1,1;mymeshnodes:lslope_bot_mi;lslopebot; ]"..
 		"label[1,3.5;Pyramids]"..
-		"image_button[1,4;1,1;mymeshnodes_mach7.png;smpyramid; ]"..
-		"image_button[2,4;1,1;mymeshnodes_mach8.png;pyramid; ]"..
-		"image_button[3,4;1,1;mymeshnodes_mach9.png;smquapyramid; ]"..
-		"image_button[4,4;1,1;mymeshnodes_mach20.png;quapyramid; ]"..
+		"item_image_button[1,4;1,1;mymeshnodes:smpyramid_mi;smpyramid; ]"..
+		"item_image_button[2,4;1,1;mymeshnodes:pyramid_mi;pyramid; ]"..
+		"item_image_button[3,4;1,1;mymeshnodes:smquapyramid_mi;smquapyramid; ]"..
+		"item_image_button[4,4;1,1;mymeshnodes:quapyramid_mi;quapyramid; ]"..
 		"label[5,3.5;Other]"..
-		"image_button[5,4;1,1;mymeshnodes_mach21.png;circle; ]"..
-		"image_button[6,4;1,1;mymeshnodes_mach18.png;pole; ]"..
-		"image_button[7,4;1,1;mymeshnodes_mach19.png;ichalf; ]"..
+		"item_image_button[5,4;1,1;mymeshnodes:circle_mi;circle; ]"..
+		"item_image_button[6,4;1,1;mymeshnodes:pole_mi;pole; ]"..
+		"item_image_button[7,4;1,1;mymeshnodes:ichalf_mi;ichalf; ]"..
 		"label[1,5;Other]"..
-		"image_button[1,5.5;1,1;mymeshnodes_mach10.png;cylinder; ]"..
-		"image_button[2,5.5;1,1;mymeshnodes_mach11.png;sphere; ]"..
-		"image_button[3,5.5;1,1;mymeshnodes_mach12.png;rounded; ]"..
-		"image_button[4,5.5;1,1;mymeshnodes_mach13.png;roundedc; ]"..
-		"image_button[5,5.5;1,1;mymeshnodes_mach14.png;cone; ]"..
-		"image_button[6,5.5;1,1;mymeshnodes_mach17.png;blob; ]"..
+		"item_image_button[1,5.5;1,1;mymeshnodes:cylinder_mi;cylinder; ]"..
+		"item_image_button[2,5.5;1,1;mymeshnodes:sphere_mi;sphere; ]"..
+		"item_image_button[3,5.5;1,1;mymeshnodes:rounded_mi;rounded; ]"..
+		"item_image_button[4,5.5;1,1;mymeshnodes:roundedc_mi;roundedc; ]"..
+		"item_image_button[5,5.5;1,1;mymeshnodes:cone_mi;cone; ]"..
+		"item_image_button[6,5.5;1,1;mymeshnodes:blob_mi;blob; ]"..
+
+
+		"label[9,1;Half Nodes]"..
+		"item_image_button[9,1.5;1,1;mymeshnodes:shape1_mi;shape1; ]"..
+		"item_image_button[10,1.5;1,1;mymeshnodes:shape2_mi;shape2; ]"..
+		"item_image_button[9,2.5;1,1;mymeshnodes:shape3_mi;shape3; ]"..
+		"item_image_button[10,2.5;1,1;mymeshnodes:shape4_mi;shape4; ]"..
 		"list[current_player;main;2,7;8,4;]")
 	meta:set_string("infotext", "Mesh Machine")
 	local inv = meta:get_inventory()
@@ -106,6 +113,10 @@ or fields["rounded"]
 or fields["roundedc"]
 or fields["cone"]
 or fields["blob"]
+or fields["shape1"]
+or fields["shape2"]
+or fields["shape3"]
+or fields["shape4"]
 then
 
 	if fields["slope"] then
@@ -310,6 +321,42 @@ then
 		make_ok = "0"
 		anzahl = "1"
 		shape = "mymeshnodes:blob_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["shape1"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:shape1_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["shape2"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:shape2_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["shape3"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:shape3_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["shape4"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:shape4_"
 		if inv:is_empty("ingot") then
 			return
 		end
