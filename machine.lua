@@ -48,6 +48,8 @@ on_construct = function(pos)
 		"image_button[1,1;1,1;mymeshnodes_mach1.png;slope; ]"..
 		"image_button[2,1;1,1;mymeshnodes_mach2.png;slopeic; ]"..
 		"image_button[3,1;1,1;mymeshnodes_mach3.png;slopeoc; ]"..
+		"image_button[4,1;1,1;mymeshnodes_mach2.png;slopei45; ]"..
+		"image_button[5,1;1,1;mymeshnodes_mach3.png;slopeo45; ]"..
 		"label[1,2;Long Slopes]"..
 		"image_button[1,2.5;1,1;mymeshnodes_mach4.png;lslope; ]"..
 		"image_button[2,2.5;1,1;mymeshnodes_mach5.png;lslopeic; ]"..
@@ -83,6 +85,8 @@ on_receive_fields = function(pos, formname, fields, sender)
 
 if fields["slope"] 
 or fields["slopeic"]
+or fields["slopeo45"]
+or fields["slopei45"]
 or fields["slopeoc"]
 or fields["lslope"] 
 or fields["lslopeic"]
@@ -126,6 +130,24 @@ then
 		make_ok = "0"
 		anzahl = "2"
 		shape = "mymeshnodes:slope_oc_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["slopei45"] then
+		make_ok = "0"
+		anzahl = "2"
+		shape = "mymeshnodes:slope_i45_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["slopeo45"] then
+		make_ok = "0"
+		anzahl = "2"
+		shape = "mymeshnodes:slope_o45_"
 		if inv:is_empty("ingot") then
 			return
 		end
