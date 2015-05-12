@@ -262,7 +262,7 @@ local bat_slopes = {   --Material , Description , Item, Image
 
 for i in ipairs(bat_slopes) do
 	local mat = bat_slopes[i][1]
-	local desc = bat_slopes[i][2]
+	local descn = bat_slopes[i][2]
 	local item = bat_slopes[i][3]
 	local img = bat_slopes[i][4]
 
@@ -354,8 +354,8 @@ local shapename = halfshapes[i][1]
 local descn = halfshapes[i][2]
 local nbox = halfshapes[i][3]
 
-minetest.register_node("mymeshnodes:"..shapename.."_"..material, {
-	description = descr.." "..descn,
+minetest.register_node("mymeshnodes:"..shapename.."_"..mat, {
+	description = descn.." "..descn,
 	drawtype = "nodebox",
 	tiles = {image},
 	paramtype = "light",
