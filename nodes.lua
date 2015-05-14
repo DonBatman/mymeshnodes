@@ -345,14 +345,14 @@ local nbox = halfshapes[i][3]
 
 minetest.register_node("mymeshnodes:"..shapename.."_"..material, {
 	description = descr.." "..descn,
-	drawtype = "nodebox",
+	drawtype = "mesh",
+	mesh = "mymeshnodes_"..shapename..".obj",
 	tiles = {image},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
-	node_box = nbox,
 	collision_box = nbox,
 	selection_box = nbox,
 })
