@@ -37,13 +37,12 @@ end,
 
 on_construct = function(pos)
 	local meta = minetest.env:get_meta(pos)
-	meta:set_string("formspec", "invsize[12,11;]"..
-		"background[-0.15,-0.25;12.40,11.75;mymeshnodes_background.png]"..
-		"list[current_name;ingot;8.5,5.5;1,1;]"..
-		"list[current_name;res;10,5.5;1,1;]"..
-		"label[8.5,5;Input:]"..
-		"label[10,5;Output:]"..
-		"label[0,0;Mesh Nodes:]"..
+	meta:set_string("formspec", "invsize[13,11;]"..
+		"background[-0.50,-0.50;14.50,12.5;mymeshnodes_background.png]"..
+		"list[current_name;ingot;10.5,6.5;1,1;]"..
+		"list[current_name;res;10.5,8;1,1;]"..
+		"label[11.5,6.5;Input:]"..
+		"label[11.5,8;Output:]"..
 		"label[1,0.5;Slopes]"..
 		"item_image_button[1,1;1,1;mymeshnodes:slope_mi;slope; ]"..
 		"item_image_button[2,1;1,1;mymeshnodes:slope_ic_mi;slopeic; ]"..
@@ -63,26 +62,27 @@ on_construct = function(pos)
 		"item_image_button[2,4;1,1;mymeshnodes:pyramid_mi;pyramid; ]"..
 		"item_image_button[3,4;1,1;mymeshnodes:smquapyramid_mi;smquapyramid; ]"..
 		"item_image_button[4,4;1,1;mymeshnodes:quapyramid_mi;quapyramid; ]"..
-		"label[5,3.5;Other]"..
-		"item_image_button[5,4;1,1;mymeshnodes:circle_mi;circle; ]"..
-		"item_image_button[6,4;1,1;mymeshnodes:pole_mi;pole; ]"..
-		"item_image_button[7,4;1,1;mymeshnodes:ichalf_mi;ichalf; ]"..
+		"label[6,3.5;Curves]"..
+		"item_image_button[6,4;1,1;mymeshnodes:rounded_mi;rounded; ]"..
+		"item_image_button[7,4;1,1;mymeshnodes:roundedc_mi;roundedc; ]"..
+		"item_image_button[8,4;1,1;mymeshnodes:curve_mi;curve; ]"..
 		"label[1,5;Other]"..
 		"item_image_button[1,5.5;1,1;mymeshnodes:cylinder_mi;cylinder; ]"..
 		"item_image_button[2,5.5;1,1;mymeshnodes:sphere_mi;sphere; ]"..
-		"item_image_button[3,5.5;1,1;mymeshnodes:rounded_mi;rounded; ]"..
-		"item_image_button[4,5.5;1,1;mymeshnodes:roundedc_mi;roundedc; ]"..
+		"item_image_button[3,5.5;1,1;mymeshnodes:circle_mi;circle; ]"..
+		"item_image_button[4,5.5;1,1;mymeshnodes:pole_mi;pole; ]"..
 		"item_image_button[5,5.5;1,1;mymeshnodes:cone_mi;cone; ]"..
 		"item_image_button[6,5.5;1,1;mymeshnodes:blob_mi;blob; ]"..
-		"item_image_button[7,5.5;1,1;mymeshnodes:curve_mi;curve; ]"..
+		"item_image_button[7,5.5;1,1;mymeshnodes:ichalf_mi;ichalf; ]"..
 
 
-		"label[9,1;Half Nodes]"..
-		"item_image_button[9,1.5;1,1;mymeshnodes:shape1_mi;shape1; ]"..
-		"item_image_button[10,1.5;1,1;mymeshnodes:shape2_mi;shape2; ]"..
-		"item_image_button[9,2.5;1,1;mymeshnodes:shape3_mi;shape3; ]"..
-		"item_image_button[10,2.5;1,1;mymeshnodes:shape4_mi;shape4; ]"..
-		"list[current_player;main;2,7;8,4;]")
+		"label[10,1;Half Nodes]"..
+		"item_image_button[10,1.5;1,1;mymeshnodes:shape1_mi;shape1; ]"..
+		"item_image_button[11,1.5;1,1;mymeshnodes:shape2_mi;shape2; ]"..
+		"item_image_button[10,2.5;1,1;mymeshnodes:shape3_mi;shape3; ]"..
+		"item_image_button[11,2.5;1,1;mymeshnodes:shape4_mi;shape4; ]"..
+		"list[current_player;main;1,7;8,4;]"..
+		"button_exit[11.5,10;1.5,1;exit;Exit]")
 	meta:set_string("infotext", "Mesh Machine")
 	local inv = meta:get_inventory()
 	inv:set_size("ingot", 1)
