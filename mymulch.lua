@@ -264,7 +264,7 @@ local mulch_tab = {
 {"mulch_magenta", "Magenta", "mymulch_magenta.png",		"^[colorize:magenta:160"},
 {"mulch_orange", "Orange", "mymulch_orange.png",		"^[colorize:orange:220"},
 {"mulch_pink", "Pink", "mymulch_pink.png",			"^[colorize:#FE2E9A:200"},
-{"mulch_red", "Red", "mymulch_red.png",			"^[colorize:#B40404:200"},
+{"mulch_red", "Red", "mymulch_red.png",				"^[colorize:#B40404:200"},
 {"mulch_violet", "Violet", "mymulch_violet.png",		"^[colorize:#2F0B3A:220"},
 {"mulch_white", "White", "mymulch_white.png",			"^[colorize:white:200"},
 {"mulch_yellow", "Yellow", "mymulch_yellow.png",		"^[colorize:yellow:200"},
@@ -303,6 +303,7 @@ local slopes = {   --shape , Description , mesh , colbox
 	{ "roundedc" ,     "Rounded Corner" ,  			 "mymeshnodes_rounded_corner.obj",    	""},
 	{ "cone" ,         "Cone" ,  				 "mymeshnodes_cone.obj",    		""},	
 	{ "blob" ,         "Blob" ,  				 "mymeshnodes_blob.obj",    		""},
+	{ "oct" ,          "Octagon" ,  			 "mymeshnodes_oct.obj",    		""},
 }
 
 for i in ipairs(slopes) do

@@ -292,6 +292,7 @@ local slopes = {   --shape , Description , mesh , colbox
 	{ "roundedc" ,     "Rounded Corner" ,  			 "mymeshnodes_rounded_corner.obj",    	""},
 	{ "cone" ,         "Cone" ,  				 "mymeshnodes_cone.obj",    		""},	
 	{ "blob" ,         "Blob" ,  				 "mymeshnodes_blob.obj",    		""},
+	{ "oct" ,         "Octagon" ,  				 "mymeshnodes_oct.obj",    		""},
 }
 
 for i in ipairs(slopes) do
