@@ -357,7 +357,8 @@ local slopes = {   --shape , Description , mesh , colbox
 	{ "blob" ,         "Blob" ,  				 "mymeshnodes_blob.obj",    		""},	
 	{ "peek" ,         "Peek" ,  				 "mymeshnodes_peek.obj",    		peek_cbox},
 	{ "valley" ,       "Valley" ,  				 "mymeshnodes_valley.obj",    		valley_cbox},
-	{ "curve" ,       "Curve" ,  				 "mymeshnodes_curve.obj",    		curve_cbox},
+	{ "curve" ,        "Curve" ,  				 "mymeshnodes_curve.obj",    		curve_cbox},
+	{ "oct" ,          "Octagon" ,  			 "mymeshnodes_oct.obj",    		""},
 }
 
 for i in ipairs(slopes) do

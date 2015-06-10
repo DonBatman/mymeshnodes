@@ -74,6 +74,7 @@ on_construct = function(pos)
 		"item_image_button[5,5.5;1,1;mymeshnodes:cone_mi;cone; ]"..
 		"item_image_button[6,5.5;1,1;mymeshnodes:blob_mi;blob; ]"..
 		"item_image_button[7,5.5;1,1;mymeshnodes:ichalf_mi;ichalf; ]"..
+		"item_image_button[8,5.5;1,1;mymeshnodes:oct_mi;oct; ]"..
 
 
 		"label[10,1;Half Nodes]"..
@@ -112,6 +113,7 @@ or fields["quapyramid"]
 or fields["circle"]
 or fields["pole"]
 or fields["ichalf"]
+or fields["oct"]
 or fields["cylinder"]
 or fields["sphere"]
 or fields["rounded"]
@@ -291,6 +293,15 @@ then
 		make_ok = "0"
 		anzahl = "4"
 		shape = "mymeshnodes:ichalf_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["oct"] then
+		make_ok = "0"
+		anzahl = "1"
+		shape = "mymeshnodes:oct_"
 		if inv:is_empty("ingot") then
 			return
 		end
