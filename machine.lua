@@ -19,7 +19,7 @@ minetest.register_node("mymeshnodes:machine", {
 	},
 
 	after_place_node = function(pos, placer)
-	local meta = minetest.env:get_meta(pos);
+	local meta = minetest.get_meta(pos);
 			meta:set_string("owner",  (placer:get_player_name() or ""));
 			meta:set_string("infotext",  "Mesh Machine (owned by " .. (placer:get_player_name() or "") .. ")");
 		end,
