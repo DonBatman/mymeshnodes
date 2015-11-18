@@ -13,6 +13,6 @@ To use simply craft a mesh machine. Then put in the block you want made into a s
 Craft
 -------
 
-default:pinewood	default:pinewood		default:pinewood
-default:pinewood	default:steel_ingiot		default:pinewood
-default:pinewood	default:pinewood		default:pinewood
+default:steel_ingot	default:steel_ingot		default:steel_ingot
+default:copper_ingot	default:gold_ingiot		default:copper_ingot
+default:steel_ingot	default:copper_ingot		default:steel_ingot
