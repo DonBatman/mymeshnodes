@@ -108,6 +108,16 @@ mymeshnodes.register_all(
 	"normal"
 	)
 --]]
+---[[
+mymeshnodes.register_all(
+	"default_aspen_wood", 
+	"Aspen Wood", 
+	"default_aspen_wood.png",
+	{choppy = 3,not_in_creative_inventory=1},
+	"default:pine_aspen",
+	"normal"
+	)
+--]]
 --[[
 mymeshnodes.register_all(
 	"default_dirt", 
