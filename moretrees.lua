@@ -298,16 +298,16 @@ local curve_cbox = {
 		}
 	}
 local bat_slopes = {   --Material , Description , Item, Image
-	{ "apple" ,  "Apple Plank" ,         "moretrees:apple_planks",      "moretrees_apple_tree_wood.png"},
-	{"beech",    "Beech Plank",          "moretrees:beech_planks",      "moretrees_beech_wood.png"},
-	{"oak",	     "Oak Plank",            "moretrees:oak_planks",        "moretrees_oak_wood.png"},
-	{"sequoia",  "Giant Sequoia Plank",  "moretrees:sequoia_planks",    "moretrees_sequoia_wood.png"},
-	{"birch",    "Birch Plank",          "moretrees:birch_planks",      "moretrees_birch_wood.png"},
-	{"palm",     "Palm Plank",           "moretrees:palm_planks",       "moretrees_palm_wood.png"},
-	{"spruce",   "Spruce Plank",         "moretrees:spruce_planks",     "moretrees_spruce_wood.png"},
-	{"willow",   "Willow Plank",         "moretrees:willow_planks",     "moretrees_willow_wood.png"},
-	{"rubber",   "Rubber Plank",         "moretrees:rubber_tree_planks","moretrees_rubber_tree_wood.png"},
-	{"fir",	     "Douglas Fir Plank",    "moretrees:fir_planks",        "moretrees_fir_wood.png"},
+	{"apple",		"Apple Plank",			"moretrees:apple_planks",		"moretrees_apple_tree_wood.png"},
+	{"beech",		"Beech Plank",			"moretrees:beech_planks",		"moretrees_beech_wood.png"},
+	{"oak",			"Oak Plank",			"moretrees:oak_planks",			"moretrees_oak_wood.png"},
+	{"sequoia",		"Giant Sequoia Plank",	"moretrees:sequoia_planks",		"moretrees_sequoia_wood.png"},
+	{"birch",		"Birch Plank",			"moretrees:birch_planks",		"moretrees_birch_wood.png"},
+	{"palm",		"Palm Plank",			"moretrees:palm_planks",		"moretrees_palm_wood.png"},
+	{"spruce",		"Spruce Plank",			"moretrees:spruce_planks",		"moretrees_spruce_wood.png"},
+	{"willow",		"Willow Plank",			"moretrees:willow_planks",		"moretrees_willow_wood.png"},
+	{"rubber",		"Rubber Plank",			"moretrees:rubber_tree_planks",	"moretrees_rubber_tree_wood.png"},
+	{"fir",			"Douglas Fir Plank",	"moretrees:fir_planks",			"moretrees_fir_wood.png"},
 }
 
 for i in ipairs(bat_slopes) do

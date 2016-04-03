@@ -297,23 +297,31 @@ local curve_cbox = {
 			{-0.5, -0.5, 0.1875, 0.5, -0.1875, 0.5},
 		}
 	}
+
+local normal_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		}
+	}
+
 local mulch_tab = {
-{"mulch_black", "Black", "mymulch_black.png",			"^[colorize:black:240"},
-{"mulch_blue", "Blue", "mymulch_blue.png",			"^[colorize:#0404B4:100"},
-{"mulch_brown", "Brown", "mymulch_brown.png",			"^[colorize:#190B07:160"},
-{"mulch_cyan", "Cyan", "mymulch_cyan.png",			"^[colorize:cyan:120"},
-{"mulch_dark_green", "Dark Green", "mymulch_dark_green.png",	"^[colorize:#071907:200"},
-{"mulch_dark_grey", "Dark Grey", "mymulch_dark_grey.png",	"^[colorize:black:200"},
-{"mulch_green", "Green", "mymulch_green.png",			"^[colorize:green:160"},
-{"mulch_grey", "Grey", "mymulch_grey.png",			"^[colorize:black:150"},
-{"mulch_magenta", "Magenta", "mymulch_magenta.png",		"^[colorize:magenta:160"},
-{"mulch_orange", "Orange", "mymulch_orange.png",		"^[colorize:orange:220"},
-{"mulch_pink", "Pink", "mymulch_pink.png",			"^[colorize:#FE2E9A:200"},
-{"mulch_red", "Red", "mymulch_red.png",				"^[colorize:#B40404:200"},
-{"mulch_violet", "Violet", "mymulch_violet.png",		"^[colorize:#2F0B3A:220"},
-{"mulch_white", "White", "mymulch_white.png",			"^[colorize:white:200"},
-{"mulch_yellow", "Yellow", "mymulch_yellow.png",		"^[colorize:yellow:200"},
-{"mulch_tan", "Tan", "mymulch_tan.png",			""},
+{"mulch_black",			"Black",		"mymulch_black.png",		"^[colorize:black:240"},
+{"mulch_blue",			"Blue",			"mymulch_blue.png",			"^[colorize:#0404B4:100"},
+{"mulch_brown",			"Brown",		"mymulch_brown.png",		"^[colorize:#190B07:160"},
+{"mulch_cyan",			"Cyan",			"mymulch_cyan.png",			"^[colorize:cyan:120"},
+{"mulch_dark_green",	"Dark Green",	"mymulch_dark_green.png",	"^[colorize:#071907:200"},
+{"mulch_dark_grey",		"Dark Grey",	"mymulch_dark_grey.png",	"^[colorize:black:200"},
+{"mulch_green",			"Green",		"mymulch_green.png",		"^[colorize:green:160"},
+{"mulch_grey",			"Grey",			"mymulch_grey.png",			"^[colorize:black:150"},
+{"mulch_magenta",		"Magenta",		"mymulch_magenta.png",		"^[colorize:magenta:160"},
+{"mulch_orange",		"Orange",		"mymulch_orange.png",		"^[colorize:orange:220"},
+{"mulch_pink",			"Pink",			"mymulch_pink.png",			"^[colorize:#FE2E9A:200"},
+{"mulch_red",			"Red",			"mymulch_red.png",			"^[colorize:#B40404:200"},
+{"mulch_violet",		"Violet",		"mymulch_violet.png",		"^[colorize:#2F0B3A:220"},
+{"mulch_white",			"White",		"mymulch_white.png",		"^[colorize:white:200"},
+{"mulch_yellow",		"Yellow",		"mymulch_yellow.png",		"^[colorize:yellow:200"},
+{"mulch_tan",			"Tan",			"mymulch_tan.png",			""},
 }
 for i in ipairs (mulch_tab) do
 	local mat = mulch_tab[i][1]
@@ -323,35 +331,34 @@ for i in ipairs (mulch_tab) do
 
 
 local slopes = {   --shape , Description , mesh , colbox
-	{ "slope" ,        "Slope" ,                      	 "mymeshnodes_twelve-twelve.obj",       slope_cbox},
-	{ "slope_ic" ,     "Inside Corner Slope" ,        	 "mymeshnodes_twelve-twelve-ic.obj",    icorner_cbox},
-	{ "slope_oc" ,     "Outside Corner Slope" ,       	 "mymeshnodes_twelve-twelve-oc.obj",    ocorner_cbox},	
-
-	{ "slope_i45" ,     "Inside 45 Slope" ,        	 	"mymeshnodes_diag1.obj",    i45_cbox},
-	{ "slope_o45" ,     "Outside 45 Slope" ,       		 "mymeshnodes_diag2.obj",    o45_cbox},
-
-	{ "lslope" ,       "Long Slope" ,                 	 "mymeshnodes_six-twelve.obj",     	slope_cbox_long},
-	{ "lslope_ic" ,    "Inside Corner Long Slope" ,   	 "mymeshnodes_six-twelve-ic.obj",    	icorner_cbox_long},
-	{ "lslope_oc" ,    "Outside Corner Long Slope" ,  	 "mymeshnodes_six-twelve-oc.obj",    	ocorner_cbox_long},
-	{ "lslope_top" ,   "Long Slope Top" ,  			 "mymeshnodes_lslope_top.obj",    	longslope_top_cbox},
-	{ "lslope_bot" ,   "Long Slope Bottom" ,  		 "mymeshnodes_lslope_bot.obj",    	longslope_bottom_cbox},
-	{ "smpyramid" ,    "Small Pyramid" ,  			 "mymeshnodes_smpyramid.obj",    	smpyr_cbox},	
-	{ "pyramid" ,      "Pyramid" ,   			 "mymeshnodes_pyramid.obj",    		pyr_cbox},	
-	{ "smquapyramid" , "Small Quarter Pyramid" ,		 "mymeshnodes_smquapyramid.obj",    	smquapyramid_cbox},		
-	{ "quapyramid" ,   "Quarter Pyramid" ,			 "mymeshnodes_quapyramid.obj",    	quapyramid_cbox},	
-	{ "circle" , 	   "Circle" ,				 "mymeshnodes_circle.obj",    		circle_cbox},	
-	{ "pole" , 	   "Pole" ,				 "mymeshnodes_pole.obj",    		pole_cbox},	
-	{ "ichalf" , 	   "Inside Corner Half" ,		 "mymeshnodes_ichalf.obj",    		""},
-	{ "cylinder" ,     "Cylinder" ,   			 "mymeshnodes_cylinder.obj",    	""},	
-	{ "sphere" ,       "Sphere" ,     			 "mymeshnodes_sphere.obj",    		""},	
-	{ "rounded" ,      "Rounded" ,  			 "mymeshnodes_rounded.obj",    		""},	
-	{ "roundedc" ,     "Rounded Corner" ,  			 "mymeshnodes_rounded_corner.obj",    	""},
-	{ "cone" ,         "Cone" ,  				 "mymeshnodes_cone.obj",    		""},	
-	{ "blob" ,         "Blob" ,  				 "mymeshnodes_blob.obj",    		""},
-	{ "peek" ,         "Peek" ,  				 "mymeshnodes_peek.obj",    		peek_cbox},
-	{ "valley" ,       "Valley" ,  				 "mymeshnodes_valley.obj",    		valley_cbox},
-	{ "curve" ,        "Curve" ,  				 "mymeshnodes_curve.obj",    		curve_cbox},
-	{ "oct" ,          "Octagon" ,  			 "mymeshnodes_oct.obj",    		""},
+	{ "slope",			"Slope",					"mymeshnodes_twelve-twelve.obj",		slope_cbox},
+	{ "slope_ic",		"Inside Corner Slope",		"mymeshnodes_twelve-twelve-ic.obj",		icorner_cbox},
+	{ "slope_oc",		"Outside Corner Slope",		"mymeshnodes_twelve-twelve-oc.obj",		ocorner_cbox},
+	{ "lslope",			"Long Slope",				"mymeshnodes_six-twelve.obj",			slope_cbox_long},
+	{ "lslope_ic",		"Inside Corner Long Slope",	"mymeshnodes_six-twelve-ic.obj",		icorner_cbox_long},
+	{ "lslope_oc",		"Outside Corner Long Slope","mymeshnodes_six-twelve-oc.obj",		ocorner_cbox_long},
+	{ "slope_i45",		"Inside 45 Slope",			"mymeshnodes_diag1.obj",				i45_cbox},
+	{ "slope_o45",		"Outside 45 Slope",			"mymeshnodes_diag2.obj",				o45_cbox},
+	{ "lslope_top",		"Long Slope Top",			"mymeshnodes_lslope_top.obj",			normal_cbox},
+	{ "lslope_bot",		"Long Slope Bottom",		"mymeshnodes_lslope_bot.obj",			normal_cbox},
+	{ "smpyramid",		"Small Pyramid",			"mymeshnodes_smpyramid.obj",			smpyr_cbox},
+	{ "pyramid",		"Pyramid",					"mymeshnodes_pyramid.obj",				pyr_cbox},
+	{ "smquapyramid",	"Small Quarter Pyramid",	"mymeshnodes_smquapyramid.obj",			normal_cbox},
+	{ "quapyramid",		"Quarter Pyramid",			"mymeshnodes_quapyramid.obj",			normal_cbox},
+	{ "circle",			"Circle",					"mymeshnodes_circle.obj",				circle_cbox},
+	{ "pole",			"Pole",						"mymeshnodes_pole.obj",					normal_cbox},
+	{ "ichalf",			"Inside Corner Half",		"mymeshnodes_ichalf.obj",				normal_cbox},
+	{ "cylinder",		"Cylinder",					"mymeshnodes_cylinder.obj",				normal_cbox},
+	{ "sphere",			"Sphere",					"mymeshnodes_sphere.obj",				normal_cbox},
+	{ "rounded",		"Rounded",					"mymeshnodes_rounded.obj",				normal_cbox},
+	{ "roundedc",		"Rounded Corner",  			"mymeshnodes_rounded_corner.obj",		normal_cbox},
+	{ "cone",			"Cone",						"mymeshnodes_cone.obj",					normal_cbox},
+	{ "blob",			"Blob",						"mymeshnodes_blob.obj",					normal_cbox},
+	{ "barrel",			"Barrel",					"mymeshnodes_barrel.obj",				normal_cbox},
+	{ "peek",			"Peek",						"mymeshnodes_peek.obj",					peek_cbox},
+	{ "valley",			"Valley",					"mymeshnodes_valley.obj",				valley_cbox},
+	{ "curve",			"Curve",					"mymeshnodes_curve.obj",				curve_cbox},
+	{ "oct",			"Octagon",					"mymeshnodes_oct.obj",					normal_cbox},
 }
 
 for i in ipairs(slopes) do

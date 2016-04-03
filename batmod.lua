@@ -50,6 +50,66 @@ local ocorner_cbox = {
 	}
 }
 
+local i45_cbox = {
+	type = "fixed",
+	fixed = {
+			{0.375, -0.5, -0.5, 0.5, 0.5, 0.5},
+			{-0.5, -0.5, 0.375, 0.5, 0.5, 0.5},
+			{-0.375, -0.5, 0.25, 0.5, 0.5, 0.5},
+			{0.25, -0.5, -0.375, 0.5, 0.5, 0.5},
+			{-0.25, -0.5, 0.125, 0.5, 0.5, 0.5},
+			{0.125, -0.5, -0.25, 0.5, 0.5, 0.5},
+			{0, -0.5, -0.125, 0.5, 0.5, 0.5},
+			{-0.125, -0.5, 0, 0.5, 0.5, 0.5},
+			{-0.5, -0.5, -0.5, 0.5, -0.375, 0.5},
+			{-0.5, -0.5, -0.375, 0.5, -0.25, 0.5},
+			{-0.5, -0.5, -0.25, 0.5, -0.125, 0.5},
+			{-0.5, -0.5, -0.125, 0.5, 0, 0.5},
+			{-0.5, -0.5, 0, 0.5, 0.125, 0.5},
+			{-0.5, -0.5, 0.125, 0.5, 0.25, 0.5},
+			{-0.5, -0.5, 0.25, 0.5, 0.375, 0.5}, 
+			{-0.375, -0.5, -0.5, 0.5, -0.25, 0.5},
+			{-0.25, -0.5, -0.5, 0.5, -0.125, 0.5},
+			{-0.125, -0.5, -0.5, 0.5, 0, 0.5}, 
+			{0, -0.5, -0.5, 0.5, 0.125, 0.5}, 
+			{0.125, -0.5, -0.5, 0.5, 0.25, 0.5},
+			{0.25, -0.5, -0.5, 0.5, 0.375, 0.5},
+	}
+}
+local o45_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.4375, -0.5, 0.375, 0.5, -0.375, 0.5}, 
+			{0.375, -0.5, -0.4375, 0.5, -0.375, 0.5}, 
+			{0.25, -0.5, -0.3125, 0.5, -0.375, 0.5}, 
+			{-0.3125, -0.5, 0.25, 0.5, -0.375, 0.5}, 
+			{0.125, -0.5, -0.1875, 0.5, -0.375, 0.5}, 
+			{-0.1875, -0.5, 0.125, 0.5, -0.375, 0.5}, 
+			{0, -0.5, 0, 0.5, -0.375, 0.5}, 
+			{0.375, -0.5, -0.3125, 0.5, -0.25, 0.5}, 
+			{-0.3125, -0.5, 0.375, 0.5, -0.25, 0.5}, 
+			{0.25, -0.5, -0.1875, 0.5, -0.25, 0.5}, 
+			{-0.1875, -0.5, 0.25, 0.5, -0.25, 0.5}, 
+			{0.125, -0.5, 0, 0.5, -0.25, 0.5}, 
+			{0, -0.5, 0.125, 0.5, -0.25, 0.5},
+			{0.375, -0.5, -0.1875, 0.5, -0.125, 0.5},
+			{-0.1875, -0.5, 0.375, 0.5, -0.125, 0.5},
+			{0.25, -0.5, 0, 0.5, -0.125, 0.5},
+			{0, -0.5, 0.25, 0.5, -0.125, 0.5},
+			{0.125, -0.5, 0.125, 0.5, -0.125, 0.5},
+			{0.375, -0.5, 0, 0.5, 0, 0.5},
+			{0, -0.5, 0.375, 0.5, 0, 0.5},
+			{0.25, -0.5, 0.125, 0.5, 0, 0.5},
+			{0.125, -0.5, 0.25, 0.5, 0, 0.5},
+			{0.375, -0.5, 0.375, 0.5, 0.4375, 0.5},
+			{0.375, -0.5, 0.25, 0.5, 0.3125, 0.5},
+			{0.375, -0.5, 0.125, 0.5, 0.1875, 0.5},
+			{0.25, -0.5, 0.375, 0.5, 0.3125, 0.5},
+			{0.125, -0.5, 0.375, 0.5, 0.1875, 0.5},
+			{0.25, -0.5, 0.25, 0.5, 0.1875, 0.5},
+	}
+}
+
 local smpyr_cbox = {
 	type = "fixed",
 	fixed = {
@@ -141,17 +201,25 @@ local curve_cbox = {
 			{-0.5, -0.5, 0.1875, 0.5, -0.1875, 0.5},
 		}
 	}
+
+local normal_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
+		}
+	}
 local bat_slopes = {   --Material , Description , Item, Image
-	{ "bat_cobble" ,          "Bat Cobble" ,            "bat_blocks:bat_cobble",              "bat_cobble.png"},
-	{ "bat_cobble_white" ,    "Bat Cobble White" ,      "bat_blocks:bat_cobble_white",        "bat_cobble_white.png"},
-	{ "bat_cobble_tan" ,      "Bat Cobble Tan" ,        "bat_blocks:bat_cobble_tan",          "bat_cobble_tan.png"},
-	{ "bat_pavers" ,          "Bat Pavers" ,            "bat_blocks:bat_pavers",              "bat_pavers.png"},
-	{ "bat_block" ,           "Bat Block" ,             "bat_blocks:bat_block",               "bat_block.png"},
-	{ "bat_tile" ,            "Bat Tile" ,              "bat_blocks:bat_tile",                "bat_tile.png"},
-	{ "bat_diag" ,            "Bat Diag" ,              "bat_blocks:bat_diag",                "bat_diag.png"},
-	{ "bat_x_block" ,         "Bat X" ,                 "bat_blocks:bat_x",                   "bat_x_block.png"},
-	{ "bat_brick" ,           "Bat Brick" ,             "bat_blocks:bat_brick",               "bat_brick.png"},
-	{ "bat_smbrick" ,         "Bat Small Brick" ,       "bat_blocks:bat_smbrick",             "bat_smbrick.png"},
+	{ "bat_cobble",			"Bat Cobble",		"bat_blocks:bat_cobble",			"bat_cobble.png"},
+	{ "bat_cobble_white",	"Bat Cobble White",	"bat_blocks:bat_cobble_white",		"bat_cobble_white.png"},
+	{ "bat_cobble_tan",		"Bat Cobble Tan",	"bat_blocks:bat_cobble_tan",		"bat_cobble_tan.png"},
+	{ "bat_pavers",			"Bat Pavers",		"bat_blocks:bat_pavers",			"bat_pavers.png"},
+	{ "bat_block",			"Bat Block",		"bat_blocks:bat_block",				"bat_block.png"},
+	{ "bat_tile",			"Bat Tile",			"bat_blocks:bat_tile",				"bat_tile.png"},
+	{ "bat_diag",			"Bat Diag",			"bat_blocks:bat_diag",				"bat_diag.png"},
+	{ "bat_x_block",		"Bat X",			"bat_blocks:bat_x",					"bat_x.png"},
+	{ "bat_brick",			"Bat Brick",		"bat_blocks:bat_brick",				"bat_brick.png"},
+	{ "bat_smbrick",		"Bat Small Brick",	"bat_blocks:bat_smbrick",			"bat_smbrick.png"},
+	{ "bat_hex",			"Bat Hex",			"bat_blocks:bat_hex",				"bat_hex.png"},
 }
 
 for i in ipairs(bat_slopes) do
@@ -161,32 +229,34 @@ for i in ipairs(bat_slopes) do
 	local img = bat_slopes[i][4]
 
 local slopes = {   --shape , Description , mesh , colbox
-	{ "slope" ,        "Slope" ,                      	 "mymeshnodes_twelve-twelve.obj",       "slope_cbox"},
-	{ "slope_ic" ,     "Inside Corner Slope" ,        	 "mymeshnodes_twelve-twelve-ic.obj",    "icorner_cbox"},
-	{ "slope_oc" ,     "Outside Corner Slope" ,       	 "mymeshnodes_twelve-twelve-oc.obj",    "ocorner_cbox"},	
-	{ "lslope" ,       "Long Slope" ,                 	 "mymeshnodes_six-twelve.obj",     	"slope_cbox_long"},
-	{ "lslope_ic" ,    "Inside Corner Long Slope" ,   	 "mymeshnodes_six-twelve-ic.obj",    	"icorner_cbox_long"},
-	{ "lslope_oc" ,    "Outside Corner Long Slope" ,  	 "mymeshnodes_six-twelve-oc.obj",    	"ocorner_cbox_long"},
-	{ "lslope_top" ,   "Long Slope Top" ,  			 "mymeshnodes_lslope_top.obj",    	""},
-	{ "lslope_bot" ,   "Long Slope Bottom" ,  		 "mymeshnodes_lslope_bot.obj",    	""},
-	{ "smpyramid" ,    "Small Pyramid" ,  			 "mymeshnodes_smpyramid.obj",    	"smpyr_cbox"},	
-	{ "pyramid" ,      "Pyramid" ,   			 "mymeshnodes_pyramid.obj",    		"pyr_cbox"},	
-	{ "smquapyramid" , "Small Quarter Pyramid" ,		 "mymeshnodes_smquapyramid.obj",    	""},		
-	{ "quapyramid" ,   "Quarter Pyramid" ,			 "mymeshnodes_quapyramid.obj",    	""},	
-	{ "circle" , 	   "Circle" ,				 "mymeshnodes_circle.obj",    		"circle_cbox"},	
-	{ "pole" , 	   "Pole" ,				 "mymeshnodes_pole.obj",    		""},	
-	{ "ichalf" , 	   "Inside Corner Half" ,		 "mymeshnodes_ichalf.obj",    		""},
-	{ "cylinder" ,     "Cylinder" ,   			 "mymeshnodes_cylinder.obj",    	""},	
-	{ "sphere" ,       "Sphere" ,     			 "mymeshnodes_sphere.obj",    		""},	
-	{ "rounded" ,      "Rounded" ,  			 "mymeshnodes_rounded.obj",    		""},	
-	{ "roundedc" ,     "Rounded Corner" ,  			 "mymeshnodes_rounded_corner.obj",    	""},
-	{ "cone" ,         "Cone" ,  				 "mymeshnodes_cone.obj",    		""},	
-	{ "blob" ,         "Blob" ,  				 "mymeshnodes_blob.obj",    		""},	
-	{ "barrel" ,       "Barrel" ,  			 	 "mymeshnodes_barrel.obj",    		""},
-	{ "peek" ,         "Peek" ,  				 "mymeshnodes_peek.obj",    		peek_cbox},
-	{ "valley" ,       "Valley" ,  				 "mymeshnodes_valley.obj",    		valley_cbox},
-	{ "curve" ,        "Curve" ,  				 "mymeshnodes_curve.obj",    		curve_cbox},
-	{ "oct" ,         "Octagon" ,  				 "mymeshnodes_oct.obj",    		""},
+	{ "slope",			"Slope",					"mymeshnodes_twelve-twelve.obj",		slope_cbox},
+	{ "slope_ic",		"Inside Corner Slope",		"mymeshnodes_twelve-twelve-ic.obj",		icorner_cbox},
+	{ "slope_oc",		"Outside Corner Slope",		"mymeshnodes_twelve-twelve-oc.obj",		ocorner_cbox},
+	{ "lslope",			"Long Slope",				"mymeshnodes_six-twelve.obj",			slope_cbox_long},
+	{ "lslope_ic",		"Inside Corner Long Slope",	"mymeshnodes_six-twelve-ic.obj",		icorner_cbox_long},
+	{ "lslope_oc",		"Outside Corner Long Slope","mymeshnodes_six-twelve-oc.obj",		ocorner_cbox_long},
+	{ "slope_i45",		"Inside 45 Slope",			"mymeshnodes_diag1.obj",				i45_cbox},
+	{ "slope_o45",		"Outside 45 Slope",			"mymeshnodes_diag2.obj",				o45_cbox},
+	{ "lslope_top",		"Long Slope Top",			"mymeshnodes_lslope_top.obj",			normal_cbox},
+	{ "lslope_bot",		"Long Slope Bottom",		"mymeshnodes_lslope_bot.obj",			normal_cbox},
+	{ "smpyramid",		"Small Pyramid",			"mymeshnodes_smpyramid.obj",			smpyr_cbox},
+	{ "pyramid",		"Pyramid",					"mymeshnodes_pyramid.obj",				pyr_cbox},
+	{ "smquapyramid",	"Small Quarter Pyramid",	"mymeshnodes_smquapyramid.obj",			normal_cbox},
+	{ "quapyramid",		"Quarter Pyramid",			"mymeshnodes_quapyramid.obj",			normal_cbox},
+	{ "circle",			"Circle",					"mymeshnodes_circle.obj",				circle_cbox},
+	{ "pole",			"Pole",						"mymeshnodes_pole.obj",					normal_cbox},
+	{ "ichalf",			"Inside Corner Half",		"mymeshnodes_ichalf.obj",				normal_cbox},
+	{ "cylinder",		"Cylinder",					"mymeshnodes_cylinder.obj",				normal_cbox},
+	{ "sphere",			"Sphere",					"mymeshnodes_sphere.obj",				normal_cbox},
+	{ "rounded",		"Rounded",					"mymeshnodes_rounded.obj",				normal_cbox},
+	{ "roundedc",		"Rounded Corner",  			"mymeshnodes_rounded_corner.obj",		normal_cbox},
+	{ "cone",			"Cone",						"mymeshnodes_cone.obj",					normal_cbox},
+	{ "blob",			"Blob",						"mymeshnodes_blob.obj",					normal_cbox},
+	{ "barrel",			"Barrel",					"mymeshnodes_barrel.obj",				normal_cbox},
+	{ "peek",			"Peek",						"mymeshnodes_peek.obj",					peek_cbox},
+	{ "valley",			"Valley",					"mymeshnodes_valley.obj",				valley_cbox},
+	{ "curve",			"Curve",					"mymeshnodes_curve.obj",				curve_cbox},
+	{ "oct",			"Octagon",					"mymeshnodes_oct.obj",					normal_cbox},
 }
 
 for i in ipairs(slopes) do
