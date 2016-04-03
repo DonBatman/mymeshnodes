@@ -1,10 +1,10 @@
 mymeshnodes
 ========
 
-Licenced as WTFPL.
+Licenced as DWYWPL.
 Created by Don
 Code for machine based off of Noncubic by yves_de_beck
-mesh moddels are by VanessaE and ExeterDad
+mesh moddels are by VanessaE, Max and ExeterDad
 
 mymeshnodes adds a number of meshnodes to the game. You use a machine to make the nodes. Supports many default blocks.
 
