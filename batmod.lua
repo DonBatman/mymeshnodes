@@ -219,7 +219,6 @@ local bat_slopes = {   --Material , Description , Item, Image
 	{ "bat_x_block",		"Bat X",			"bat_blocks:bat_x",					"bat_x.png"},
 	{ "bat_brick",			"Bat Brick",		"bat_blocks:bat_brick",				"bat_brick.png"},
 	{ "bat_smbrick",		"Bat Small Brick",	"bat_blocks:bat_smbrick",			"bat_smbrick.png"},
-	{ "bat_hex",			"Bat Hex",			"bat_blocks:bat_hex",				"bat_hex.png"},
 }
 
 for i in ipairs(bat_slopes) do
