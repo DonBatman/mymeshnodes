@@ -1,7 +1,7 @@
 mymeshnodes
 ========
 
-Licenced as DWYWPL.
+Licenced as MIT & CCO.
 Created by Don
 Code for machine based off of Noncubic by yves_de_beck
 mesh moddels are by VanessaE, Max and ExeterDad
