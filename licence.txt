@@ -21,4 +21,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-Textures and models by VanessaE, Max and ExeterDad (CC0) unless listed below
+Textures and models by Don Michaud, VanessaE, Max and ExeterDad (CC0)
