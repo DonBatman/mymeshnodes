@@ -1,4 +1,4 @@
----[[
+
 mymeshnodes.register_all(
 	"default_sandstone", 
 	"Sandstone", 
@@ -7,8 +7,6 @@ mymeshnodes.register_all(
 	"default:sandstone",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_desert_sand", 
 	"Desert Sand", 
@@ -17,8 +15,6 @@ mymeshnodes.register_all(
 	"default:desert_sand",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_clay", 
 	"Clay", 
@@ -27,8 +23,6 @@ mymeshnodes.register_all(
 	"default:clay",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_cobble", 
 	"Cobble", 
@@ -37,8 +31,6 @@ mymeshnodes.register_all(
 	"default:cobble",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_stone", 
 	"Stone", 
@@ -47,8 +39,6 @@ mymeshnodes.register_all(
 	"default:stone",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_cactus", 
 	"Cactus", 
@@ -57,8 +47,6 @@ mymeshnodes.register_all(
 	"default:cactus",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_sand", 
 	"Sand", 
@@ -67,8 +55,6 @@ mymeshnodes.register_all(
 	"default:sand",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_desert_stone", 
 	"Desert Stone", 
@@ -77,8 +63,6 @@ mymeshnodes.register_all(
 	"default:desert_stone",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_wood", 
 	"Wood", 
@@ -87,8 +71,6 @@ mymeshnodes.register_all(
 	"default:wood",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_pine_wood", 
 	"Pine Wood", 
@@ -97,18 +79,14 @@ mymeshnodes.register_all(
 	"default:pine_wood",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_acacia_wood", 
 	"Acacia Wood", 
 	"default_acacia_wood.png",
 	{choppy = 3,not_in_creative_inventory=1},
-	"default:pine_acacia",
+	"default:acacia_wood",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_aspen_wood", 
 	"Aspen Wood", 
@@ -117,8 +95,6 @@ mymeshnodes.register_all(
 	"default:pine_aspen",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_dirt", 
 	"Dirt", 
@@ -127,8 +103,6 @@ mymeshnodes.register_all(
 	"default:dirt",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_brick", 
 	"Brick", 
@@ -137,8 +111,6 @@ mymeshnodes.register_all(
 	"default:brick",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_bronze_block", 
 	"Bronze Block", 
@@ -147,8 +119,6 @@ mymeshnodes.register_all(
 	"default:bronzeblock",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_coal_block", 
 	"Coal Block", 
@@ -157,8 +127,6 @@ mymeshnodes.register_all(
 	"default:coalblock",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_copper_block", 
 	"Copper Block", 
@@ -167,8 +135,6 @@ mymeshnodes.register_all(
 	"default:copperblock",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_desert_cobble", 
 	"Desert Cobble", 
@@ -177,8 +143,6 @@ mymeshnodes.register_all(
 	"default:desert_cobble",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_diamond_block", 
 	"Diamond Block", 
@@ -187,8 +151,6 @@ mymeshnodes.register_all(
 	"default:diamondblock",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_glass", 
 	"Glass", 
@@ -197,8 +159,6 @@ mymeshnodes.register_all(
 	"default:glass",
 	"glasslike"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_gold_block", 
 	"Gold Block", 
@@ -207,8 +167,6 @@ mymeshnodes.register_all(
 	"default:goldblock",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_gravel", 
 	"Gravel", 
@@ -217,8 +175,6 @@ mymeshnodes.register_all(
 	"default:gravel",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_ice", 
 	"Ice", 
@@ -227,8 +183,30 @@ mymeshnodes.register_all(
 	"default:ice",
 	"normal"
 	)
---]]
---[[
+mymeshnodes.register_all(
+	"default_aspen_tree", 
+	"Aspen Tree", 
+	"default_aspen_tree.png",
+	{choppy=2,oddly_breakable_by_hand=1,flammable=2,not_in_creative_inventory=1},
+	"default:aspen_tree",
+	"normal"
+	)
+mymeshnodes.register_all(
+	"default_pine_tree", 
+	"Pine Tree", 
+	"default_pine_tree.png",
+	{choppy=2,oddly_breakable_by_hand=1,flammable=2,not_in_creative_inventory=1},
+	"default:pine_tree",
+	"normal"
+	)
+mymeshnodes.register_all(
+	"default_acacia_tree", 
+	"Acacia Tree", 
+	"default_acacia_tree.png",
+	{choppy=2,oddly_breakable_by_hand=1,flammable=2,not_in_creative_inventory=1},
+	"default:acacia_tree",
+	"normal"
+	)
 mymeshnodes.register_all(
 	"default_jungletree", 
 	"Jungle Tree", 
@@ -237,8 +215,6 @@ mymeshnodes.register_all(
 	"default:jungletree",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_junglewood", 
 	"Jungle Wood", 
@@ -247,8 +223,6 @@ mymeshnodes.register_all(
 	"default:junglewood",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_lava", 
 	"Lava", 
@@ -257,8 +231,6 @@ mymeshnodes.register_all(
 	"default:lava_source",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_mese", 
 	"Mese", 
@@ -267,8 +239,6 @@ mymeshnodes.register_all(
 	"default:mese",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_mossycobble", 
 	"Mossy Cobble", 
@@ -277,8 +247,6 @@ mymeshnodes.register_all(
 	"default:mossycobble",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_obsidian", 
 	"Obsidian", 
@@ -287,8 +255,6 @@ mymeshnodes.register_all(
 	"default:obsidian",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_obsidian_glass", 
 	"Obsidian Glass", 
@@ -297,8 +263,6 @@ mymeshnodes.register_all(
 	"default:obsidian_glass",
 	"glasslike"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_obsidian_brick", 
 	"Obsidian Brick", 
@@ -307,18 +271,14 @@ mymeshnodes.register_all(
 	"default:obsidianbrick",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
-	"default_pinetree", 
+	"default_pine_tree", 
 	"Pine Tree", 
-	"default_pinetree.png",
+	"default_pine_tree.png",
 	{choppy=2,oddly_breakable_by_hand=2,flammable=2,not_in_creative_inventory=1},
-	"default:pinetree",
+	"default:pine_tree",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_sandstone_brick", 
 	"Sandstone Brick", 
@@ -327,8 +287,6 @@ mymeshnodes.register_all(
 	"default:sandstonebrick",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_desert_stone_brick", 
 	"Desert Stone Brick", 
@@ -337,8 +295,6 @@ mymeshnodes.register_all(
 	"default:desert_stonebrick",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_snow", 
 	"Snow", 
@@ -347,8 +303,6 @@ mymeshnodes.register_all(
 	"default:snowblock",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_steel_block", 
 	"Steel Block", 
@@ -357,8 +311,6 @@ mymeshnodes.register_all(
 	"default:steelblock",
 	"normal"
 	)
---]]
----[[
 mymeshnodes.register_all(
 	"default_stone_brick", 
 	"Stone Brick", 
@@ -367,8 +319,6 @@ mymeshnodes.register_all(
 	"default:stonebrick",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_tree", 
 	"Tree", 
@@ -377,8 +327,6 @@ mymeshnodes.register_all(
 	"default:tree",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"default_water", 
 	"Water", 
@@ -387,8 +335,6 @@ mymeshnodes.register_all(
 	"default:water_source",
 	"normal"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"farming_straw", 
 	"Straw", 
@@ -397,11 +343,9 @@ mymeshnodes.register_all(
 	"farming:straw",
 	"normal"
 	)
---]]
 -----------------------------------------------------------------------------------------------------
 --wool
 
---[[
 mymeshnodes.register_all(
 	"wool_white", 
 	"White Wool", 
@@ -409,8 +353,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_white"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_black", 
 	"Black Wool", 
@@ -418,8 +360,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_black"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_blue", 
 	"Blue Wool", 
@@ -427,8 +367,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_blue"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_brown", 
 	"Brown Wool", 
@@ -436,8 +374,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_brown"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_cyan", 
 	"Cyan Wool", 
@@ -445,8 +381,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_cyan"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_dark_green", 
 	"Dark Green Wool", 
@@ -454,8 +388,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_dark_green"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_dark_grey", 
 	"Dark Grey Wool", 
@@ -463,8 +395,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_dark_grey"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_green", 
 	"Green Wool", 
@@ -472,8 +402,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_green"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_grey", 
 	"Grey Wool", 
@@ -481,8 +409,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_grey"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_magenta", 
 	"Magenta Wool", 
@@ -490,8 +416,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_magenta"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_orange", 
 	"Orange Wool", 
@@ -499,8 +423,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_orange"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_pink", 
 	"Pink Wool", 
@@ -508,8 +430,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_pink"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_red", 
 	"Red Wool", 
@@ -517,8 +437,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_red"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_violet", 
 	"Violet Wool", 
@@ -526,8 +444,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_violet"
 	)
---]]
---[[
 mymeshnodes.register_all(
 	"wool_yellow", 
 	"Yellow Wool", 
@@ -535,7 +451,6 @@ mymeshnodes.register_all(
 	{snappy=2,choppy=2,oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 	"wool_yellow"
 	)
---]]
 mymeshnodes.register_all(--material, description, image, groups, craft item
 	"mi", 
 	"", 

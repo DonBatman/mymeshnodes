@@ -4,56 +4,43 @@ dofile(minetest.get_modpath("mymeshnodes").."/machine.lua")
 dofile(minetest.get_modpath("mymeshnodes").."/register.lua")
 
 
-
-
-
-
-local mod_moreblocks = minetest.get_modpath("moreblocks") 
-local mod_castle = minetest.get_modpath("castle")
-local mod_castles = minetest.get_modpath("castles")
-local mod_bat_blocks = minetest.get_modpath("bat_blocks")
-local mod_moretrees = minetest.get_modpath("moretrees")
-local mod_hardenedclay = minetest.get_modpath("hardenedclay")
-local mod_ores = minetest.get_modpath("ores")
-local mod_mulch = minetest.get_modpath("mymulch")
-
-if mod_moreblocks then
+if minetest.get_modpath("moreblocks") then
 	dofile(minetest.get_modpath("mymeshnodes").."/moreblocks.lua")
-	
 	end
 
-if mod_castle then
+if minetest.get_modpath("castle") then
 	dofile(minetest.get_modpath("mymeshnodes").."/castle.lua")
-	
 	end
 
-if mod_castles then
+if minetest.get_modpath("castles") then
 	dofile(minetest.get_modpath("mymeshnodes").."/castle.lua")
-	
 	end
 
-if mod_bat_blocks then
+if minetest.get_modpath("bat_blocks") then
 	dofile(minetest.get_modpath("mymeshnodes").."/batmod.lua")
-	
 	end
 
-if mod_moretrees then
+if minetest.get_modpath("moretrees") then
 	dofile(minetest.get_modpath("mymeshnodes").."/moretrees.lua")
-	
 	end
 
-if mod_hardenedclay then
+if minetest.get_modpath("hardenedclay") then
 	dofile(minetest.get_modpath("mymeshnodes").."/hardenedclay.lua")
-	
 	end
 
-if mod_ores then
+if minetest.get_modpath("ores") then
 	dofile(minetest.get_modpath("mymeshnodes").."/ores.lua")
-	
 	end
 
-if mod_mulch then
+if minetest.get_modpath("mymulch") then
 	dofile(minetest.get_modpath("mymeshnodes").."/mymulch.lua")
-	
+	end
+
+if minetest.get_modpath("my_door_wood") then
+	dofile(minetest.get_modpath("mymeshnodes").."/mydoorwood.lua")
+	end
+
+if minetest.get_modpath("mycobble") then
+	dofile(minetest.get_modpath("mymeshnodes").."/mycobble.lua")
 	end
 

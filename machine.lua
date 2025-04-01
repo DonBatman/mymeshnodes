@@ -57,6 +57,8 @@ on_construct = function(pos)
 		"item_image_button[3,2.5;1,1;mymeshnodes:lslope_oc_mi;lslopeoc; ]"..
 		"item_image_button[4,2.5;1,1;mymeshnodes:lslope_top_mi;lslopetop; ]"..
 		"item_image_button[5,2.5;1,1;mymeshnodes:lslope_bot_mi;lslopebot; ]"..
+		"label[7,2;Barrel]"..
+		"item_image_button[7,2.5;1,1;mymeshnodes:barrel_mi;barrel; ]"..
 		"label[1,3.5;Pyramids]"..
 		"item_image_button[1,4;1,1;mymeshnodes:smpyramid_mi;smpyramid; ]"..
 		"item_image_button[2,4;1,1;mymeshnodes:pyramid_mi;pyramid; ]"..
@@ -125,6 +127,7 @@ or fields["shape1"]
 or fields["shape2"]
 or fields["shape3"]
 or fields["shape4"]
+or fields["barrel"]
 then
 
 	if fields["slope"] then
@@ -406,6 +409,15 @@ then
 		end
 	end
 
+	if fields["barrel"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:barrel_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
 		local ingotstack = inv:get_stack("ingot", 1)
 		local resstack = inv:get_stack("res", 1)
 ----------------------------------------------------------------------------------
@@ -442,8 +454,14 @@ local nodes_of_slopes = {
 	{"default:steelblock",				"default_steel_block"},
 	{"default:stone",					"default_stone"},
 	{"default:stonebrick",				"default_stone_brick"},
+	{"default:pine_tree",				"default_pine_tree"},
+	{"default:aspen_tree",				"default_aspen_tree"},
+	{"default:acacia_tree",				"default_acacia_tree"},
 	{"default:tree",					"default_tree"},
 	{"default:wood",					"default_wood"},
+	{"default:pine_wood",				"default_pine_wood"},
+	{"default:aspen_wood",				"default_aspen_wood"},
+	{"default:acacia_wood",				"default_acacia_wood"},
 	{"farming:straw",					"farming_straw"},
 	{"wool:black",						"wool_black"},
 	{"wool:blue",						"wool_blue"},
@@ -547,8 +565,36 @@ local nodes_of_slopes = {
 	{"mymulch:mulch_white",			"mulch_white"},
 	{"mymulch:mulch_yellow",		"mulch_yellow"},
 	{"mymulch:mulch_tan",			"mulch_tan"},
-
-			}
+	
+	--my_door_wood
+	{"my_door_wood:wood_red",		"red_wood"},
+	{"my_door_wood:wood_dark_grey",	"dark_grey_wood"},
+	{"my_door_wood:wood_grey",		"grey_wood"},
+	{"my_door_wood:wood_brown",		"brown_wood"},
+	{"my_door_wood:wood_white",		"white_wood"},
+	{"my_door_wood:wood_yellow",	"yellow_wood"},
+	{"my_door_wood:wood_black",		"black_wood"},
+	
+	--mycobble
+	{"mycobble:desert_gravel",			"desert_gravel"},
+	{"mycobble:sandstone_gravel",		"sandstone_gravel"},
+	{"mycobble:sandstone_sand",			"sandstone_sand"},
+	{"mycobble:silver_gravel",			"silver_gravel"},
+	{"mycobble:silver_cobble",			"silver_cobble"},
+	{"mycobble:sandstone_cobble",		"sandstone_cobble"},
+	{"mycobble:desert_sandstone_cobble","desert_sandstone_cobble"},
+	{"mycobble:desert_sandstone_gravel","desert_sandstone_gravel"},
+	{"mycobble:desert_gravel",			"desert_gravel"},
+	{"mycobble:desert_sandstone_sand",	"desert_sandstone_sand"},
+	
+	--myglass
+	{"myglass:myglass_black",			"black_glass"},
+	{"myglass:myglass_yellow",			"yellow_glass"},
+	{"myglass:myglass_white",			"white_glass"},
+	{"myglass:myglass_blue",			"blue_glass"},
+	{"myglass:myglass_red",				"red_glass"},
+	{"myglass:myglass_lime",			"lime_glass"},
+	}
 
 	for i in ipairs (nodes_of_slopes) do
 		local nodeitem = nodes_of_slopes[i][1]
