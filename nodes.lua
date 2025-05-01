@@ -376,6 +376,7 @@ minetest.register_node("mymeshnodes:"..shap.."_"..material, {
 	tiles = {image},
 	paramtype = "light",
 	paramtype2 = "facedir",
+	use_texture_alpha = 'blend',
 	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
