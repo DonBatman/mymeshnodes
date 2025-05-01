@@ -298,12 +298,18 @@ local curve_cbox = {
 		}
 	}
 local myglass_glass = {   --Material , Description , Item, Image
-	{ "myglass_black",	"Glass Black",	"myglass:myglass_black",	"black"},
-	{ "myglass_yellow",	"Glass Yellow",	"myglass:myglass_yellow",	"yellow"},
-	{ "myglass_white",	"Glass White",	"myglass:myglass_white",	"white"},
-	{ "myglass_blue",	"Glass Blue",	"myglass:myglass_blue",		"blue"},
-	{ "myglass_red",	"Glass Red",	"myglass:myglass_red",		"red"},
-	{ "myglass_lime",	"Glass Lime",	"myglass:myglass_lime",		"lime"},
+	{ "myglass_framed_black",	"Glass Black",	"myglass:myglass_framed_black",		"myglass_black_framed.png"},
+	{ "myglass_framed_yellow",	"Glass Yellow",	"myglass:myglass_framed_yellow",	"myglass_yellow_framed.png"},
+	{ "myglass_framed_white",	"Glass White",	"myglass:myglass_framed_white",		"myglass_white_framed.png"},
+	{ "myglass_framed_blue",	"Glass Blue",	"myglass:myglass_framed_blue",		"myglass_blue_framed.png"},
+	{ "myglass_framed_red",		"Glass Red",	"myglass:myglass_framed_red",		"myglass_red_framed.png"},
+	{ "myglass_framed_lime",	"Glass Lime",	"myglass:myglass_framed_lime",		"myglass_lime_framed.png"},
+	{ "myglass_black",	"Glass Black",	"myglass:myglass_black",	"myglass_black_framed.png"},
+	{ "myglass_yellow",	"Glass Yellow",	"myglass:myglass_yellow",	"myglass_yellow_framed.png"},
+	{ "myglass_white",	"Glass White",	"myglass:myglass_white",	"myglass_white_framed.png"},
+	{ "myglass_blue",	"Glass Blue",	"myglass:myglass_blue",		"myglass_blue_framed.png"},
+	{ "myglass_red",	"Glass Red",	"myglass:myglass_red",		"myglass_red_framed.png"},
+	{ "myglass_lime",	"Glass Lime",	"myglass:myglass_lime",		"myglass_lime_framed.png"},
 }
 
 local normal_cbox = {
@@ -315,7 +321,7 @@ local normal_cbox = {
 
 for i in ipairs(myglass_glass) do
 	local mat = myglass_glass[i][1]
-	local desc = myglass_glass[i][2]
+	local des = myglass_glass[i][2]
 	local item = myglass_glass[i][3]
 	local img = myglass_glass[i][4]
 
@@ -358,13 +364,13 @@ for i in ipairs(slopes) do
 
 --slope
 minetest.register_node("mymeshnodes:"..shap.."_"..mat, {
-	description = desc.." "..mat,
+	description = desc.." "..des,
 	drawtype = "mesh",
 	mesh = mesh,
-	tiles = {"myglass_"..img.."_framed.png"},
+	tiles = {img},
 	paramtype = "light",
 	paramtype2 = "facedir",
-	use_texture_alpha = 'blend',
+	use_texture_alpha = "blend",
 	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
 	on_place = minetest.rotate_node,
