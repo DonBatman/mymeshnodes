@@ -44,3 +44,11 @@ if minetest.get_modpath("mycobble") then
 	dofile(minetest.get_modpath("mymeshnodes").."/mycobble.lua")
 	end
 
+if minetest.get_modpath("myores") then
+	dofile(minetest.get_modpath("mymeshnodes").."/myores.lua")
+	end
+
+if minetest.get_modpath("myglass") then
+	dofile(minetest.get_modpath("mymeshnodes").."/myglass.lua")
+	end
+
