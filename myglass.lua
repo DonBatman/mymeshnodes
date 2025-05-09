@@ -421,7 +421,7 @@ local nbox = halfshapes[i][3]
 minetest.register_node("mymeshnodes:"..shapename.."_"..mat, {
 	description = desc.." "..descn,
 	drawtype = "nodebox",
-	tiles = {image},
+	tiles = {img},
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
