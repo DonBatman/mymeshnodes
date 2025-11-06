@@ -52,3 +52,7 @@ if minetest.get_modpath("myglass") then
 	dofile(minetest.get_modpath("mymeshnodes").."/myglass.lua")
 	end
 
+if minetest.get_modpath("mywhiteblock") then
+	dofile(minetest.get_modpath("mymeshnodes").."/mywhiteblock.lua")
+	end
+
