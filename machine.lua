@@ -638,6 +638,23 @@ local nodes_of_slopes = {
 	{"mywhiteblock:block_white",    "block_white"},
 	{"mywhiteblock:block_yellow",   "block_yellow"},
 	{"mywhiteblock:block",			"block"},
+	--My Blocks
+	{"myblocks:block_1",			"myblocks_1"},
+	{"myblocks:block_2",			"myblocks_2"},
+	{"myblocks:block_3",			"myblocks_3"},
+	{"myblocks:block_4",			"myblocks_4"},
+	{"myblocks:block_5",			"myblocks_5"},
+	{"myblocks:block_6",			"myblocks_6"},
+	{"myblocks:block_7",			"myblocks_7"},
+	{"myblocks:block_8",			"myblocks_8"},
+	{"myblocks:block_9",			"myblocks_9"},
+	{"myblocks:block_10",			"myblocks_10"},
+	{"myblocks:block_11",			"myblocks_11"},
+	{"myblocks:block_12",			"myblocks_12"},
+	{"myblocks:block_13",			"myblocks_13"},
+	{"myblocks:block_14",			"myblocks_14"},
+	{"myblocks:block_15",			"myblocks_15"},
+	{"myblocks:block_16",			"myblocks_16"},
 	}
 
 	for i in ipairs (nodes_of_slopes) do
