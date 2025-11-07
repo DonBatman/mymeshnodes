@@ -247,6 +247,12 @@ local slopes = {   --shape , Description , mesh , colbox
 	{ "valley",			"Valley",					"mymeshnodes_valley.obj",				valley_cbox},
 	{ "curve",			"Curve",					"mymeshnodes_curve.obj",				curve_cbox},
 	{ "oct",			"Octagon",					"mymeshnodes_oct.obj",					normal_cbox},
+	{ "smsquare",		"Small Square",				"mymeshnodes_smsquare.obj",				normal_cbox},
+	{ "95square",		"95 Square",				"mymeshnodes_95square.obj",				normal_cbox},
+	{ "shape1",			"Shape 1",					"mymeshnodes_shape1.obj",				normal_cbox},
+	{ "shape2",			"Shape 2",					"mymeshnodes_shape2.obj",				normal_cbox},
+	{ "shape3",			"Shape 3",					"mymeshnodes_shape3.obj",				normal_cbox},
+	{ "shape4",			"Shape 4",					"mymeshnodes_shape4.obj",				normal_cbox},
 }
 
 for i in ipairs(slopes) do
@@ -293,7 +299,7 @@ minetest.register_node("mymeshnodes:"..shap.."_block", {
 })
 
 local paintables = {
-	"mymeshnodes:slope_block","mymeshnodes:slope_ic_block","mymeshnodes:slope_oc_block","mymeshnodes:lslope_ic_block","mymeshnodes:lslope_oc_block","mymeshnodes:slope_i45_block","mymeshnodes:slope_o45_block","mymeshnodes:lslope_top_block","mymeshnodes:lslope_bot_block","mymeshnodes:smpyramid_block","mymeshnodes:pyramid_block","mymeshnodes:smquapyramid_block","mymeshnodes:circle_block","mymeshnodes:pole_block","mymeshnodes:ichalf_block","mymeshnodes:cylinder_block","mymeshnodes:sphere_block","mymeshnodes:rounded_block","mymeshnodes:roundedc_block","mymeshnodes:cone_block","mymeshnodes:blob_block","mymeshnodes:barrel_block","mymeshnodes:peek_block","mymeshnodes:valley_block","mymeshnodes:curve_block","mymeshnodes:oct_block"
+	"mymeshnodes:slope_block","mymeshnodes:slope_ic_block","mymeshnodes:slope_oc_block","mymeshnodes:lslope_ic_block","mymeshnodes:lslope_oc_block","mymeshnodes:slope_i45_block","mymeshnodes:slope_o45_block","mymeshnodes:lslope_top_block","mymeshnodes:lslope_bot_block","mymeshnodes:smpyramid_block","mymeshnodes:pyramid_block","mymeshnodes:smquapyramid_block","mymeshnodes:circle_block","mymeshnodes:pole_block","mymeshnodes:ichalf_block","mymeshnodes:cylinder_block","mymeshnodes:sphere_block","mymeshnodes:rounded_block","mymeshnodes:roundedc_block","mymeshnodes:cone_block","mymeshnodes:blob_block","mymeshnodes:barrel_block","mymeshnodes:peek_block","mymeshnodes:valley_block","mymeshnodes:curve_block","mymeshnodes:oct_block","mymeshnodes:smsquare_block","mymeshnodes:95square_block"
 }
 
 for _, entry in ipairs(mywhiteblock.colors) do

@@ -68,6 +68,9 @@ on_construct = function(pos)
 		"item_image_button[6,4;1,1;mymeshnodes:rounded_mi;rounded; ]"..
 		"item_image_button[7,4;1,1;mymeshnodes:roundedc_mi;roundedc; ]"..
 		"item_image_button[8,4;1,1;mymeshnodes:curve_mi;curve; ]"..
+		"label[10,3.5;Squares]"..
+		"item_image_button[10,4;1,1;mymeshnodes:smsquare_mi;smsquare; ]"..
+		"item_image_button[11,4;1,1;mymeshnodes:95square_mi;95square; ]"..
 		"label[1,5;Other]"..
 		"item_image_button[1,5.5;1,1;mymeshnodes:cylinder_mi;cylinder; ]"..
 		"item_image_button[2,5.5;1,1;mymeshnodes:sphere_mi;sphere; ]"..
@@ -128,6 +131,8 @@ or fields["shape2"]
 or fields["shape3"]
 or fields["shape4"]
 or fields["barrel"]
+or fields["smsquare"]
+or fields["95square"]
 then
 
 	if fields["slope"] then
@@ -413,6 +418,24 @@ then
 		make_ok = "0"
 		anzahl = "4"
 		shape = "mymeshnodes:barrel_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["smsquare"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:smsquare_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["95square"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:95square_"
 		if inv:is_empty("ingot") then
 			return
 		end
