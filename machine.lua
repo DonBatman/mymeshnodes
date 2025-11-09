@@ -37,12 +37,12 @@ end,
 
 on_construct = function(pos)
 	local meta = minetest.get_meta(pos)
-	meta:set_string("formspec", "invsize[13,11;]"..
-		"background[-0.50,-0.50;14.50,12.5;mymeshnodes_background.png]"..
-		"list[current_name;ingot;10.5,6.5;1,1;]"..
-		"list[current_name;res;10.5,8;1,1;]"..
-		"label[11.5,6.5;Input:]"..
-		"label[11.5,8;Output:]"..
+	meta:set_string("formspec", "invsize[15,11;]"..
+		"background[-0.50,-0.50;16.50,12.5;mymeshnodes_background.png]"..
+		"list[current_name;ingot;11.5,7;1,1;]"..
+		"list[current_name;res;11.5,8.5;1,1;]"..
+		"label[12.5,7;Input:]"..
+		"label[12.5,8.5;Output:]"..
 		"label[1,0.5;Slopes]"..
 		"item_image_button[1,1;1,1;mymeshnodes:slope_mi;slope; ]"..
 		"item_image_button[2,1;1,1;mymeshnodes:slope_ic_mi;slopeic; ]"..
@@ -59,18 +59,22 @@ on_construct = function(pos)
 		"item_image_button[5,2.5;1,1;mymeshnodes:lslope_bot_mi;lslopebot; ]"..
 		"label[7,2;Barrel]"..
 		"item_image_button[7,2.5;1,1;mymeshnodes:barrel_mi;barrel; ]"..
+		
 		"label[1,3.5;Pyramids]"..
 		"item_image_button[1,4;1,1;mymeshnodes:smpyramid_mi;smpyramid; ]"..
 		"item_image_button[2,4;1,1;mymeshnodes:pyramid_mi;pyramid; ]"..
 		"item_image_button[3,4;1,1;mymeshnodes:smquapyramid_mi;smquapyramid; ]"..
 		"item_image_button[4,4;1,1;mymeshnodes:quapyramid_mi;quapyramid; ]"..
-		"label[6,3.5;Curves]"..
-		"item_image_button[6,4;1,1;mymeshnodes:rounded_mi;rounded; ]"..
-		"item_image_button[7,4;1,1;mymeshnodes:roundedc_mi;roundedc; ]"..
-		"item_image_button[8,4;1,1;mymeshnodes:curve_mi;curve; ]"..
-		"label[10,3.5;Squares]"..
-		"item_image_button[10,4;1,1;mymeshnodes:smsquare_mi;smsquare; ]"..
-		"item_image_button[11,4;1,1;mymeshnodes:95square_mi;95square; ]"..
+		
+		"label[5.5,3.5;Curves]"..
+		"item_image_button[5.5,4;1,1;mymeshnodes:rounded_mi;rounded; ]"..
+		"item_image_button[6.5,4;1,1;mymeshnodes:roundedc_mi;roundedc; ]"..
+		"item_image_button[7.5,4;1,1;mymeshnodes:curve_mi;curve; ]"..
+		
+		"label[13.5,0.5;Squares]"..
+		"item_image_button[13.5,1;1,1;mymeshnodes:smsquare_mi;smsquare; ]"..
+		"item_image_button[13.5,2;1,1;mymeshnodes:95square_mi;95square; ]"..
+		
 		"label[1,5;Other]"..
 		"item_image_button[1,5.5;1,1;mymeshnodes:cylinder_mi;cylinder; ]"..
 		"item_image_button[2,5.5;1,1;mymeshnodes:sphere_mi;sphere; ]"..
@@ -80,13 +84,26 @@ on_construct = function(pos)
 		"item_image_button[6,5.5;1,1;mymeshnodes:blob_mi;blob; ]"..
 		"item_image_button[7,5.5;1,1;mymeshnodes:ichalf_mi;ichalf; ]"..
 		"item_image_button[8,5.5;1,1;mymeshnodes:oct_mi;oct; ]"..
-
-
-		"label[10,1;Half Nodes]"..
-		"item_image_button[10,1.5;1,1;mymeshnodes:shape1_mi;shape1; ]"..
-		"item_image_button[11,1.5;1,1;mymeshnodes:shape2_mi;shape2; ]"..
-		"item_image_button[10,2.5;1,1;mymeshnodes:shape3_mi;shape3; ]"..
-		"item_image_button[11,2.5;1,1;mymeshnodes:shape4_mi;shape4; ]"..
+		
+		"label[9,0.5;Walls]"..
+		"item_image_button[8.5,1;1,1;mymeshnodes:wall_mi;wall; ]"..
+		"item_image_button[9.5,1;1,1;mymeshnodes:wall_mi;wall_corner; ]"..
+		"item_image_button[8.5,2;1,1;mymeshnodes:wall_oc_mi;wall_oc; ]"..
+		"item_image_button[9.5,2;1,1;mymeshnodes:wall_ic_mi;wall_ic; ]"..
+		
+		"label[9,3;Flat Nodes]"..
+		"item_image_button[9,3.5;1,1;mymeshnodes:flat1_mi;flat1; ]"..
+		"item_image_button[10,3.5;1,1;mymeshnodes:flat2_mi;flat2; ]"..
+		"item_image_button[11,3.5;1,1;mymeshnodes:flat3_mi;flat3; ]"..
+		
+		"label[12.5,3;Torus]"..
+		"item_image_button[12.5,3.5;1,1;mymeshnodes:torus_mi;torus; ]"..
+		
+		"label[11,0.5;Half Nodes]"..
+		"item_image_button[11,1;1,1;mymeshnodes:shape1_mi;shape1; ]"..
+		"item_image_button[12,1;1,1;mymeshnodes:shape2_mi;shape2; ]"..
+		"item_image_button[11,2;1,1;mymeshnodes:shape3_mi;shape3; ]"..
+		"item_image_button[12,2;1,1;mymeshnodes:shape4_mi;shape4; ]"..
 		"list[current_player;main;1,7;8,4;]"..
 		"button_exit[11.5,10;1.5,1;exit;Exit]")
 	meta:set_string("infotext", "Mesh Machine")
@@ -133,6 +150,14 @@ or fields["shape4"]
 or fields["barrel"]
 or fields["smsquare"]
 or fields["95square"]
+or fields["wall"]
+or fields["wall_corner"]
+or fields["wall_oc"]
+or fields["wall_ic"]
+or fields["flat1"]
+or fields["flat2"]
+or fields["flat3"]
+or fields["torus"]
 then
 
 	if fields["slope"] then
@@ -436,6 +461,78 @@ then
 		make_ok = "0"
 		anzahl = "4"
 		shape = "mymeshnodes:95square_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["wall"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:wall_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["wall_corner"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:wall_corner_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["wall_oc"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:wall_oc_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["wall_ic"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:wall_ic_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["flat1"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:flat1_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["flat2"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:flat2_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["flat3"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:flat3_"
+		if inv:is_empty("ingot") then
+			return
+		end
+	end
+
+	if fields["torus"] then
+		make_ok = "0"
+		anzahl = "4"
+		shape = "mymeshnodes:torus_"
 		if inv:is_empty("ingot") then
 			return
 		end

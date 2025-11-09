@@ -201,6 +201,96 @@ local curve_cbox = {
 			{-0.5, -0.5, 0.1875, 0.5, -0.1875, 0.5},
 		}
 	}
+local pole_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.125, -0.5, -0.125, 0.125, 0.5, 0.125},
+		}
+	}
+local smsquare_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.25, -0.25, -0.25, 0.25, 0.25, 0.25},
+		}
+	}
+local nfsquare_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.4375, -0.4375, -0.4375, 0.4375, 0.4375, 0.4375},
+		}
+	}
+local flat1_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.5, 0.5, -0.3125, 0.5},
+		}
+	}
+local flat2_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.0625, -0.5, 0.5, 0.0625, 0.5},
+		}
+	}
+local flat3_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, 0.3125, -0.5, 0.5, 0.5, 0.5},
+		}
+	}
+local wall_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.5, -0.125, 0.5, 0.5},
+		}
+	}
+local walloc_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.5, -0.125, 0.5, -0.125},
+		}
+	}
+local wallic_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.5, 0.5, 0.5, -0.125},
+			{0.125, -0.5, -0.5, 0.5, 0.5, 0.5},
+		}
+	}
+local wallc_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.5, 0.5, 0.5, -0.125},
+			{0.125, -0.5, -0.5, 0.5, 0.5, 0.5},
+			{-0.5, -0.5, -0.5, 0.5, -0.125, 0.5},
+		}
+	}
+local shape1_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.25, 0.5, 0, 0.25},
+		}
+	}
+local shape2_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.25, 0.5, 0, 0.25},
+			{-0.25, -0.5, -0.5, 0.25, 0, 0.5}
+		}
+	}
+local shape3_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.25, 0.5, 0, 0.25},
+			{-0.25, -0.5, -0.5, 0.25, 0, 0.25}
+		}
+	}
+local shape4_cbox = {
+	type = "fixed",
+	fixed = {
+			{-0.5, -0.5, -0.25, 0.25, 0, 0.25},
+			{-0.25, -0.5, -0.5, 0.25, 0, 0.25}
+		}
+	}
 
 local normal_cbox = {
 	type = "fixed",
@@ -208,15 +298,15 @@ local normal_cbox = {
 			{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5},
 		}
 	}
-local bat_slopes = {   --Material , Description , Item, Image
+local white_block = {   --Material , Description , Item, Image
 	{ "block",			"White Block",		"mywhiteblock:block",			"mywhiteblock_white.png"},
 }
 
-for i in ipairs(bat_slopes) do
-	local mat = bat_slopes[i][1]
-	local desc = bat_slopes[i][2]
-	local item = bat_slopes[i][3]
-	local img = bat_slopes[i][4]
+for i in ipairs(white_block) do
+	local mat = white_block[i][1]
+	local desc = white_block[i][2]
+	local item = white_block[i][3]
+	local img = white_block[i][4]
 
 local slopes = {   --shape , Description , mesh , colbox
 	{ "slope",			"Slope",					"mymeshnodes_twelve-twelve.obj",		slope_cbox},
@@ -227,15 +317,15 @@ local slopes = {   --shape , Description , mesh , colbox
 	{ "lslope_oc",		"Outside Corner Long Slope","mymeshnodes_six-twelve-oc.obj",		ocorner_cbox_long},
 	{ "slope_i45",		"Inside 45 Slope",			"mymeshnodes_diag1.obj",				i45_cbox},
 	{ "slope_o45",		"Outside 45 Slope",			"mymeshnodes_diag2.obj",				o45_cbox},
-	{ "lslope_top",		"Long Slope Top",			"mymeshnodes_lslope_top.obj",			normal_cbox},
-	{ "lslope_bot",		"Long Slope Bottom",		"mymeshnodes_lslope_bot.obj",			normal_cbox},
+	{ "lslope_top",		"Long Slope Top",			"mymeshnodes_lslope_top.obj",			slope_backhalf_cbox},
+	{ "lslope_bot",		"Long Slope Bottom",		"mymeshnodes_lslope_bot.obj",			slope_fronthalf_cbox},
 	{ "smpyramid",		"Small Pyramid",			"mymeshnodes_smpyramid.obj",			smpyr_cbox},
 	{ "pyramid",		"Pyramid",					"mymeshnodes_pyramid.obj",				pyr_cbox},
-	{ "smquapyramid",	"Small Quarter Pyramid",	"mymeshnodes_smquapyramid.obj",			normal_cbox},
-	{ "quapyramid",		"Quarter Pyramid",			"mymeshnodes_quapyramid.obj",			normal_cbox},
+	{ "smquapyramid",	"Small Quarter Pyramid",	"mymeshnodes_smquapyramid.obj",			smquapyramid_cbox},
+	{ "quapyramid",		"Quarter Pyramid",			"mymeshnodes_quapyramid.obj",			quapyramid_cbox},
 	{ "circle",			"Circle",					"mymeshnodes_circle.obj",				circle_cbox},
-	{ "pole",			"Pole",						"mymeshnodes_pole.obj",					normal_cbox},
-	{ "ichalf",			"Inside Corner Half",		"mymeshnodes_ichalf.obj",				normal_cbox},
+	{ "pole",			"Pole",						"mymeshnodes_pole.obj",					pole_cbox},
+	{ "ichalf",			"Inside Corner Half",		"mymeshnodes_ichalf.obj",				slope_fronthalf_cbox},
 	{ "cylinder",		"Cylinder",					"mymeshnodes_cylinder.obj",				normal_cbox},
 	{ "sphere",			"Sphere",					"mymeshnodes_sphere.obj",				normal_cbox},
 	{ "rounded",		"Rounded",					"mymeshnodes_rounded.obj",				normal_cbox},
@@ -247,17 +337,25 @@ local slopes = {   --shape , Description , mesh , colbox
 	{ "valley",			"Valley",					"mymeshnodes_valley.obj",				valley_cbox},
 	{ "curve",			"Curve",					"mymeshnodes_curve.obj",				curve_cbox},
 	{ "oct",			"Octagon",					"mymeshnodes_oct.obj",					normal_cbox},
-	{ "smsquare",		"Small Square",				"mymeshnodes_smsquare.obj",				normal_cbox},
-	{ "95square",		"95 Square",				"mymeshnodes_95square.obj",				normal_cbox},
-	{ "shape1",			"Shape 1",					"mymeshnodes_shape1.obj",				normal_cbox},
-	{ "shape2",			"Shape 2",					"mymeshnodes_shape2.obj",				normal_cbox},
-	{ "shape3",			"Shape 3",					"mymeshnodes_shape3.obj",				normal_cbox},
-	{ "shape4",			"Shape 4",					"mymeshnodes_shape4.obj",				normal_cbox},
+	{ "smsquare",		"Small Square",				"mymeshnodes_smsquare.obj",				smsquare_cbox},
+	{ "95square",		"95 Square",				"mymeshnodes_95square.obj",				nfsquare_cbox},
+	{ "shape1",			"Shape 1",					"mymeshnodes_shape1.obj",				shape1_cbox},
+	{ "shape2",			"Shape 2",					"mymeshnodes_shape2.obj",				shape2_cbox},
+	{ "shape3",			"Shape 3",					"mymeshnodes_shape3.obj",				shape3_cbox},
+	{ "shape4",			"Shape 4",					"mymeshnodes_shape4.obj",				shape4_cbox},
+	{ "wall",			"Wall",						"mymeshnodes_wall.obj",					wall_cbox},
+	{ "wall_corner",	"Wall Corner",				"mymeshnodes_wall_corner.obj",			wallc_cbox},
+	{ "wall_oc",		"Wall OC",					"mymeshnodes_wall_oc.obj",				walloc_cbox},
+	{ "wall_ic",		"Wall IC",					"mymeshnodes_wall_ic.obj",				wallic_cbox},
+	{ "flat1" ,         "Flat 1" ,  			 	"mymeshnodes_flat1.obj",    			flat1_cbox},
+	{ "flat2" ,         "Flat 2" ,  			 	"mymeshnodes_flat2.obj",    			flat2_cbox},
+	{ "flat3" ,         "Flat 3" ,  			 	"mymeshnodes_flat3.obj",    			flat3_cbox},
+	{ "torus" ,         "Torus" ,  			 	 	"mymeshnodes_torus.obj",    			flat1_cbox},
 }
 
 for i in ipairs(slopes) do
 	local shap = slopes[i][1]
-	local desc = slopes[i][2]
+	local des = slopes[i][2]
 	local mesh = slopes[i][3]
 	local colbox = slopes[i][4]
 mywhiteblock = {}
@@ -285,7 +383,7 @@ for i in ipairs (mywhiteblock.colors) do
 	local num = (mywhiteblock.colors)[i][3]
 --slope
 minetest.register_node("mymeshnodes:"..shap.."_block", {
-	description = desc.." "..mat,
+	description = des.." "..mat,
 	drawtype = "mesh",
 	mesh = mesh,
 	tiles = {img},
@@ -299,17 +397,17 @@ minetest.register_node("mymeshnodes:"..shap.."_block", {
 })
 
 local paintables = {
-	"mymeshnodes:slope_block","mymeshnodes:slope_ic_block","mymeshnodes:slope_oc_block","mymeshnodes:lslope_ic_block","mymeshnodes:lslope_oc_block","mymeshnodes:slope_i45_block","mymeshnodes:slope_o45_block","mymeshnodes:lslope_top_block","mymeshnodes:lslope_bot_block","mymeshnodes:smpyramid_block","mymeshnodes:pyramid_block","mymeshnodes:smquapyramid_block","mymeshnodes:circle_block","mymeshnodes:pole_block","mymeshnodes:ichalf_block","mymeshnodes:cylinder_block","mymeshnodes:sphere_block","mymeshnodes:rounded_block","mymeshnodes:roundedc_block","mymeshnodes:cone_block","mymeshnodes:blob_block","mymeshnodes:barrel_block","mymeshnodes:peek_block","mymeshnodes:valley_block","mymeshnodes:curve_block","mymeshnodes:oct_block","mymeshnodes:smsquare_block","mymeshnodes:95square_block"
+	"mymeshnodes:slope_block","mymeshnodes:slope_ic_block","mymeshnodes:slope_oc_block","mymeshnodes:lslope_ic_block","mymeshnodes:lslope_oc_block","mymeshnodes:slope_i45_block","mymeshnodes:slope_o45_block","mymeshnodes:lslope_top_block","mymeshnodes:lslope_bot_block","mymeshnodes:smpyramid_block","mymeshnodes:pyramid_block","mymeshnodes:smquapyramid_block","mymeshnodes:circle_block","mymeshnodes:pole_block","mymeshnodes:ichalf_block","mymeshnodes:cylinder_block","mymeshnodes:sphere_block","mymeshnodes:rounded_block","mymeshnodes:roundedc_block","mymeshnodes:cone_block","mymeshnodes:blob_block","mymeshnodes:barrel_block","mymeshnodes:peek_block","mymeshnodes:valley_block","mymeshnodes:curve_block","mymeshnodes:oct_block","mymeshnodes:smsquare_block","mymeshnodes:95square_block","mymeshnodes:shape1_block","mymeshnodes:shape2_block","mymeshnodes:shape3_block","mymeshnodes:shape4_block","mymeshnodes:wall_block","mymeshnodes:wall_corner_block","mymeshnodes:wall_oc_block","mymeshnodes:wall_ic_block","mymeshnodes:flat1_block","mymeshnodes:flat2_block","mymeshnodes:flat3_block","mymeshnodes:torus_block"
 }
 
 for _, entry in ipairs(mywhiteblock.colors) do
 	local color = entry[1]
 	local desc = entry[2]
 	local paint = "^[colorize:"..entry[3]
-core.register_node("mymeshnodes:".. shap .. "_block_" .. col, {
-	description = desc .. " Block",
+core.register_node("mymeshnodes:".. shap .. "_block_" .. color, {
+	description = des .. " Block",
 	drawtype = "mesh",
-	tiles = {img.."^[colorize:"..num},
+	tiles = {img..paint},
 	mesh = mesh,
 	paramtype = "light",
 	paramtype2 = "facedir",
