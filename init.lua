@@ -60,3 +60,7 @@ if minetest.get_modpath("myblocks") then
 	dofile(minetest.get_modpath("mymeshnodes").."/myblocks.lua")
 	end
 
+if minetest.get_modpath("mycastle") then
+	dofile(minetest.get_modpath("mymeshnodes").."/mycastle.lua")
+	end
+
