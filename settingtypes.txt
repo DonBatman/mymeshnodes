@@ -1,0 +1,18 @@
+
+#Enable supported mods
+mymeshnodes.moreblocks(Enable moreblocks) bool true
+mymeshnodes.castle(Enable castle) bool true
+mymeshnodes.castles(Enable castles) bool true
+mymeshnodes.batblocks(Enable batmod) bool true
+mymeshnodes.moretrees(Enable moretrees) bool true
+mymeshnodes.hardenedclay(Enable hardenedclay) bool true
+mymeshnodes.ores(Enable ores) bool true
+mymeshnodes.mymulch(Enable mymulch) bool true
+mymeshnodes.my_door_wood(Enable my_door_wood) bool true
+mymeshnodes.myores(Enable myores) bool true
+mymeshnodes.mycobble(Enable mycobble) bool true
+mymeshnodes.myglass(Enable myglass) bool true
+mymeshnodes.mywhiteblock(Enable mywhiteblock) bool true
+mymeshnodes.myblocks(Enable myblocks) bool true
+mymeshnodes.mycastle(Enable mycastle) bool true
+

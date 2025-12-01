@@ -418,7 +418,7 @@ for i in ipairs (mywhiteblock.colors) do
 	local cdes = (mywhiteblock.colors)[i][2]
 	local num = (mywhiteblock.colors)[i][3]
 --slope
-minetest.register_node("mymeshnodes:"..shap.."_block", {
+core.register_node("mymeshnodes:"..shap.."_block", {
 	description = des.." "..mat,
 	drawtype = "mesh",
 	mesh = mesh,
@@ -427,7 +427,7 @@ minetest.register_node("mymeshnodes:"..shap.."_block", {
 	paramtype2 = "facedir",
 	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = colbox,
 	selection_box = colbox,
 })
@@ -450,7 +450,7 @@ core.register_node("mymeshnodes:".. shap .. "_block_" .. color, {
 	is_ground_content = false,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2,cracky = 2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = colbox,
 	selection_box = colbox,
 })

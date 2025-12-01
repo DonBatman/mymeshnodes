@@ -371,7 +371,7 @@ for i in ipairs(slopes) do
 	local colbox = slopes[i][4]
 
 --slope
-minetest.register_node("mymeshnodes:"..shap.."_"..mat, {
+core.register_node("mymeshnodes:"..shap.."_"..mat, {
 	description = desc.." "..descm.." Mulch",
 	drawtype = "mesh",
 	mesh = mesh,
@@ -382,7 +382,7 @@ minetest.register_node("mymeshnodes:"..shap.."_"..mat, {
 	paramtype2 = "facedir",
 	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = colbox,
 	selection_box = colbox,
 })
@@ -427,7 +427,7 @@ local shapename = halfshapes[i][1]
 local descn = halfshapes[i][2]
 local nbox = halfshapes[i][3]
 
-minetest.register_node("mymeshnodes:"..shapename.."_"..mat, {
+core.register_node("mymeshnodes:"..shapename.."_"..mat, {
 	description = desc.." "..descn,
 	drawtype = "nodebox",
 	tiles = {"mymulch_tan.png"..dye.."^mymulch_top.png"},
@@ -435,7 +435,7 @@ minetest.register_node("mymeshnodes:"..shapename.."_"..mat, {
 	paramtype2 = "facedir",
 	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	node_box = nbox,
 	collision_box = nbox,
 	selection_box = nbox,

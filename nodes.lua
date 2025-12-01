@@ -348,7 +348,7 @@ for i in ipairs(slopes) do
 	local colbox = slopes[i][4]
 
 --slope
-minetest.register_node("mymeshnodes:"..shap.."_"..material, {
+core.register_node("mymeshnodes:"..shap.."_"..material, {
 	description = descr.." "..desc,
 	drawtype = "mesh",
 	mesh = mesh,
@@ -360,7 +360,7 @@ minetest.register_node("mymeshnodes:"..shap.."_"..material, {
 	sounds = default.node_sound_wood_defaults(),
 	selection_box = colbox,
 	collision_box = colbox,
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 })
 
 end
@@ -403,7 +403,7 @@ local shapename = halfshapes[i][1]
 local descn = halfshapes[i][2]
 local nbox = halfshapes[i][3]
 
-minetest.register_node("mymeshnodes:"..shapename.."_"..material, {
+core.register_node("mymeshnodes:"..shapename.."_"..material, {
 	description = descr.." "..descn,
 	drawtype = "mesh",
 	mesh = "mymeshnodes_"..shapename..".obj",
@@ -412,7 +412,7 @@ minetest.register_node("mymeshnodes:"..shapename.."_"..material, {
 	paramtype2 = "facedir",
 	groups = {choppy=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = nbox,
 	selection_box = nbox,
 })

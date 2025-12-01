@@ -367,7 +367,7 @@ for i in ipairs(slopes) do
 	local colbox = slopes[i][4]
 
 --slope
-minetest.register_node("mymeshnodes:"..shap.."_"..mat, {
+core.register_node("mymeshnodes:"..shap.."_"..mat, {
 	description = desc.." "..mat,
 	drawtype = "mesh",
 	mesh = mesh,
@@ -376,7 +376,7 @@ minetest.register_node("mymeshnodes:"..shap.."_"..mat, {
 	paramtype2 = "facedir",
 	groups = {cracky=2, oddly_breakable_by_hand=2, not_in_creative_inventory=1},
 	sounds = default.node_sound_wood_defaults(),
-	on_place = minetest.rotate_node,
+	on_place = core.rotate_node,
 	collision_box = colbox,
 	selection_box = colbox,
 })
